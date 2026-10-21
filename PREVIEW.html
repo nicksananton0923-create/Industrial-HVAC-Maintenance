@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>nicksananton0923-create — GitHub Profile Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* ---------- page setup ---------- */
+@page {
+  size: A4;
+  margin: 0;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 11pt;
+  line-height: 1.6;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---------- cover page ---------- */
+.cover {
+  page-break-after: always;
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+}
+.cover-band {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 28mm;
+  background: linear-gradient(90deg, #0A4D8C 0%, #0A4D8C 60%, #F5B800 60%, #F5B800 100%);
+}
+.cover-inner {
+  position: absolute;
+  top: 60mm;
+  left: 22mm;
+  right: 22mm;
+}
+.cover-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10pt;
+  letter-spacing: 0.2em;
+  color: #0A4D8C;
+  font-weight: 600;
+  margin-bottom: 18mm;
+}
+.cover-title {
+  font-family: 'Roboto Slab', 'Inter', serif;
+  font-size: 44pt;
+  line-height: 1.1;
+  color: #0f172a;
+  margin: 0 0 8mm 0;
+  font-weight: 800;
+}
+.cover-rule {
+  width: 60mm;
+  height: 4px;
+  background: #F5B800;
+  margin: 6mm 0 8mm 0;
+}
+.cover-subtitle {
+  font-size: 16pt;
+  color: #334155;
+  margin: 0 0 4mm 0;
+  font-weight: 500;
+}
+.cover-tagline {
+  font-size: 11pt;
+  color: #64748b;
+  margin: 0 0 22mm 0;
+  font-style: italic;
+}
+.cover-meta {
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 6mm 0;
+  margin-bottom: 14mm;
+}
+.cover-meta div {
+  display: flex;
+  padding: 2mm 0;
+  font-size: 10pt;
+}
+.cover-meta .k {
+  width: 60mm;
+  color: #64748b;
+  font-weight: 500;
+}
+.cover-meta .v {
+  flex: 1;
+  color: #0f172a;
+}
+.cover-note {
+  font-size: 9.5pt;
+  color: #475569;
+  background: #f1f5f9;
+  border-left: 3px solid #F5B800;
+  padding: 4mm 5mm;
+  line-height: 1.5;
+}
+.cover-note code {
+  font-family: 'JetBrains Mono', monospace;
+  background: #e2e8f0;
+  padding: 0.5mm 1.5mm;
+  border-radius: 2px;
+  font-size: 9pt;
+}
+.cover-footer {
+  position: absolute;
+  bottom: 12mm;
+  left: 22mm;
+  right: 22mm;
+  font-size: 8.5pt;
+  color: #94a3b8;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 4mm;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- README sections ---------- */
+.readme-section {
+  page-break-before: always;
+  padding: 14mm 18mm 18mm 18mm;
+}
+.section-banner {
+  background: #f8fafc;
+  border-bottom: 2px solid #F5B800;
+  padding: 4mm 6mm;
+  margin: -14mm -18mm 8mm -18mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9.5pt;
+}
+.section-tag {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.1em;
+  color: #0A4D8C;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.section-url {
+  color: #64748b;
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5pt;
+}
+
+/* ---------- markdown body (GitHub-like) ---------- */
+.markdown-body {
+  color: #0f172a;
+  font-size: 10.5pt;
+  line-height: 1.6;
+}
+.markdown-body h1 {
+  font-size: 22pt;
+  font-weight: 700;
+  border-bottom: 2px solid #F5B800;
+  padding-bottom: 4mm;
+  margin: 6mm 0 6mm 0;
+  color: #0f172a;
+}
+.markdown-body h2 {
+  font-size: 16pt;
+  font-weight: 700;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 2mm;
+  margin: 8mm 0 4mm 0;
+  color: #0f172a;
+}
+.markdown-body h3 {
+  font-size: 13pt;
+  font-weight: 600;
+  margin: 6mm 0 3mm 0;
+  color: #0A4D8C;
+}
+.markdown-body h4 {
+  font-size: 11pt;
+  font-weight: 600;
+  margin: 5mm 0 2mm 0;
+  color: #0f172a;
+}
+.markdown-body p {
+  margin: 0 0 4mm 0;
+}
+.markdown-body a {
+  color: #0A4D8C;
+  text-decoration: none;
+  border-bottom: 1px solid #c2d4e8;
+}
+.markdown-body strong {
+  font-weight: 700;
+  color: #0f172a;
+}
+.markdown-body em {
+  font-style: italic;
+}
+.markdown-body ul, .markdown-body ol {
+  margin: 0 0 4mm 0;
+  padding-left: 7mm;
+}
+.markdown-body li {
+  margin-bottom: 1.5mm;
+}
+.markdown-body code {
+  font-family: 'JetBrains Mono', monospace;
+  background: #f1f5f9;
+  padding: 0.5mm 1.5mm;
+  border-radius: 3px;
+  font-size: 9.5pt;
+  color: #be185d;
+}
+.markdown-body pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 4mm 5mm;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 9pt;
+  line-height: 1.5;
+  margin: 0 0 4mm 0;
+}
+.markdown-body pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font-size: 9pt;
+}
+.markdown-body blockquote {
+  border-left: 4px solid #F5B800;
+  background: #fffbeb;
+  padding: 3mm 5mm;
+  margin: 0 0 4mm 0;
+  color: #475569;
+}
+.markdown-body blockquote p {
+  margin: 0;
+}
+.markdown-body hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 6mm 0;
+}
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 4mm 0;
+  font-size: 9.5pt;
+}
+.markdown-body table th,
+.markdown-body table td {
+  border: 1px solid #e2e8f0;
+  padding: 2mm 3mm;
+  text-align: left;
+  vertical-align: top;
+}
+.markdown-body table th {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #0f172a;
+}
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+  margin: 2mm 0;
+}
+.markdown-body div.align-center {
+  text-align: center;
+  margin: 4mm 0;
+}
+.markdown-body p img {
+  display: inline-block;
+  margin: 0 1mm;
+  vertical-align: middle;
+}
+
+/* avoid breaking inside a table row */
+.markdown-body tr {
+  page-break-inside: avoid;
+}
+</style>
+</head>
+<body>
+<section class="cover">
+  <div class="cover-band"></div>
+  <div class="cover-inner">
+    <div class="cover-eyebrow">GITHUB PROFILE MAKEOVER · ENGINEERING-PRO</div>
+    <h1 class="cover-title">Professional GitHub<br/>Profile Preview</h1>
+    <div class="cover-rule"></div>
+    <p class="cover-subtitle">For <strong>nicksananton0923-create</strong></p>
+    <p class="cover-tagline">
+      Electrical Technology · Renewable Energy · Industrial Maintenance · Arduino &amp; IoT
+    </p>
+    <div class="cover-meta">
+      <div><span class="k">Files in this preview</span><span class="v">1 profile README · 6 repo READMEs · 1 setup guide</span></div>
+      <div><span class="k">Theme palette</span><span class="v">Solar Yellow #F5B800 · Circuit Blue #0A4D8C</span></div>
+      <div><span class="k">Rendered</span><span class="v">2026 · for review before upload</span></div>
+    </div>
+    <p class="cover-note">
+      This PDF is a rendered preview only. Upload the <code>.md</code> files in the
+      <code>github-profile/</code> folder to your GitHub repositories to make them live.
+      See <em>SETUP-GUIDE</em> at the end of this document for step-by-step instructions.
+    </p>
+  </div>
+  <div class="cover-footer">
+    Prepared by Z.ai · Engineering-Pro visual system
+  </div>
+</section>
+
+<section class="readme-section"><div class="section-banner"><span class="section-tag">PROFILE README</span><a class="section-url" href="https://github.com/nicksananton0923-create">https://github.com/nicksananton0923-create</a></div><div class="markdown-body"><!-- ================================================================== -->
+<!-- PROFILE README — nicksananton0923-create/nicksananton0923-create      -->
+<!-- Style: Engineering-Pro · Solar Yellow #F5B800 + Circuit Blue #0A4D8C -->
+<!-- Replace every [PLACEHOLDER] with your real info before committing.  -->
+<!-- ================================================================== -->
+
+<div align="center">
+
+<!-- Hero header -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0A4D8C&height=120&section=header&text=NICKSANANTON&fontSize=42&fontColor=ffffff&desc=Electrical+%E2%80%A2+Renewable+Energy+%E2%80%A2+Automation&descSize=16&descAlignY=70&animation=fadeIn" width="100%" alt="header banner" />
+
+<!-- Tagline -->
+<h3>Building Smart Solutions &nbsp;⚡&nbsp; Electrical Technology &nbsp;☀&nbsp; Industrial Maintenance &nbsp;⚙&nbsp; Arduino &amp; IoT</h3>
+
+<!-- Identity badges -->
+<p>
+  <a href="https://github.com/nicksananton0923-create"><img src="https://img.shields.io/badge/GitHub-nicksananton0923--create-0A4D8C?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
+  <img src="https://img.shields.io/badge/Location-Sri%20Lanka-F5B800?style=flat-square&logoColor=white" alt="Location"/>
+  <img src="https://img.shields.io/badge/Focus-Industrial%20%26%20Embedded-0A4D8C?style=flat-square" alt="Focus"/>
+  <img src="https://img.shields.io/badge/Status-Learning%20%26%20Building-F5B800?style=flat-square" alt="Status"/>
+</p>
+
+<!-- Visitor counter + social (fill placeholders) -->
+<p>
+  <img src="https://komarev.com/ghpvc/?username=nicksananton0923-create&color=0A4D8C&style=flat-square&label=Profile+Visitors" alt="visitor count"/>
+  <a href="[YOUR-LINKEDIN-URL]"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A69C0?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="mailto:[YOUR-EMAIL]"><img src="https://img.shields.io/badge/Email-Contact%20Me-F5B800?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+</p>
+
+</div>
+
+<hr>
+<!-- About section -->
+<h2>🧑‍🔧 About Me</h2>
+<p>I am an Electrical Technology student in Sri Lanka focused on the practical side of engineering — wiring it up, instrumenting it, measuring it, and writing it down so the next person can repeat the work. My core interests sit at the intersection of three areas: <strong>renewable energy systems (Solar PV)</strong>, <strong>industrial maintenance and equipment monitoring</strong>, and <strong>embedded automation using Arduino and ESP32</strong>. Rather than only studying these topics in theory, I document every project on GitHub so that the documentation becomes part of my professional record.</p>
+<p>I work in a deliberately methodical way: I inspect what already exists, I propose changes only after I understand the constraints, and I prefer reusable CSV / Markdown templates over one-off files. The goal is not to ship flashy demos, but to build a body of evidence — a portfolio that an employer, a senior engineer, or a future version of me can read and immediately understand. Every repository on this account follows the same documentation pattern: an accurate README, a clear folder structure, sample anonymized data, and an explicit statement of what has been verified versus what still needs testing.</p>
+<p>I am currently growing my skills in <strong>PLC fundamentals, AutoCAD Electrical, MATLAB data analysis, and dashboard design in Excel / Power BI</strong> — see the <em>Currently Learning</em> section below for what is on the bench right now.</p>
+<hr>
+<!-- Tech stack -->
+<h2>🛠️ Tech Stack</h2>
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="25%">
+
+**⚡ Electrical & Energy**
+
+</td>
+<td align="center" width="25%">
+
+**⚙️ Industrial**
+
+</td>
+<td align="center" width="25%">
+
+**🤖 Embedded / IoT**
+
+</td>
+<td align="center" width="25%">
+
+**📊 Data & Docs**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Solar PV systems<br>
+Inverters & cabling<br>
+Site coordination<br>
+Electrical safety
+
+</td>
+<td valign="top">
+
+HVAC & chillers<br>
+Preventive maintenance<br>
+Asset registers<br>
+Fault logging
+
+</td>
+<td valign="top">
+
+Arduino Nano / UNO<br>
+ESP32<br>
+Sensor integration<br>
+Servo & relay control
+
+</td>
+<td valign="top">
+
+Excel dashboards<br>
+Power BI (learning)<br>
+Markdown / GitHub<br>
+CSV templating
+
+</td>
+</tr>
+</table>
+
+</div>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Arduino"/>
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white" alt="Markdown"/>
+  <img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" alt="Excel"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"/>
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/>
+  <img src="https://img.shields.io/badge/Solar%20PV-F5B800?style=flat-square&logo=solar&logoColor=black" alt="Solar PV"/>
+</p>
+
+<hr>
+<!-- Featured projects -->
+<h2>🚀 Featured Projects</h2>
+<blockquote>
+<p>These are the repositories I am actively maintaining. Pin 6 of them to your profile (see <em>Setup Guide</em>) — the 7th is this profile README itself.</p>
+</blockquote>
+<div align="center">
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### ⚡ Industrial Air Quality Monitor
+Arduino Nano-based industrial air-quality monitor with multi-sensor detection, threshold-based alerts, and a compact embedded enclosure.
+
+<p>
+  <img src="https://img.shields.io/badge/Language-C%2B%2B-00599C?style=flat-square" alt="C++"/>
+  <img src="https://img.shields.io/badge/Stars-1-F5B800?style=flat-square" alt="Stars"/>
+</p>
+[→ View Repository](https://github.com/nicksananton0923-create/industrial-air-quality-monitor)
+
+</td>
+<td width="50%" valign="top">
+
+### 🔥 Smart Fire Detection &amp; Suppression
+Arduino-based smart fire detection prototype with conceptual automatic suppression — designed for educational demonstrations of fire sensing, emergency alerts, and automated safety control.
+
+<p>
+  <img src="https://img.shields.io/badge/Platform-Arduino-00979D?style=flat-square" alt="Arduino"/>
+  <img src="https://img.shields.io/badge/Focus-Safety%20Systems-F5B800?style=flat-square" alt="Safety"/>
+</p>
+[→ View Repository](https://github.com/nicksananton0923-create/Arduino-smart-fire-detection-suppression)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🍅 Tomato Colour Sorting Conveyor
+Arduino-based smart conveyor belt that detects tomato ripeness using a colour sensor and sorts produce into green, partially-ripe, and red bins via a servo mechanism.
+
+<p>
+  <img src="https://img.shields.io/badge/Platform-Arduino-00979D?style=flat-square" alt="Arduino"/>
+  <img src="https://img.shields.io/badge/Focus-Automation-0A4D8C?style=flat-square" alt="Automation"/>
+</p>
+[→ View Repository](https://github.com/nicksananton0923-create/Arduino-tomato-colour-sorting)
+
+</td>
+<td width="50%" valign="top">
+
+### 🏭 Industrial HVAC Maintenance
+Professional HVAC documentation framework — asset registers, chiller / AHU / cooling-tower service records, fault logs, and preventive maintenance schedules with reusable CSV templates.
+
+<p>
+  <img src="https://img.shields.io/badge/Format-CSV%20%2F%20Markdown-0A4D8C?style=flat-square" alt="CSV/MD"/>
+  <img src="https://img.shields.io/badge/Records-12%2B%20templates-F5B800?style=flat-square" alt="Templates"/>
+</p>
+[→ View Repository](https://github.com/nicksananton0923-create/Industrial-hvac-maintenance)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 💧 Industrial Water Consumption Monitoring
+Industrial water consumption analysis project — meter readings, usage calculations, consumption trends, anomaly identification, and reporting dashboards using Excel and Power BI.
+
+<p>
+  <img src="https://img.shields.io/badge/Tool-Excel%20%2F%20Power%20BI-217346?style=flat-square" alt="Excel"/>
+  <img src="https://img.shields.io/badge/Focus-Data%20Analysis-0A4D8C?style=flat-square" alt="Analysis"/>
+</p>
+[→ View Repository](https://github.com/nicksananton0923-create/Industrial-water-consumption-monitoring)
+
+</td>
+<td width="50%" valign="top">
+
+### 🔧 Industrial Maintenance Request System
+Digital maintenance management system for work requests, technician assignments, work order tracking, breakdown records, and maintenance reporting.
+
+<p>
+  <img src="https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=flat-square" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/Type-CMMS-0A4D8C?style=flat-square" alt="CMMS"/>
+</p>
+[→ View Repository](https://github.com/nicksananton0923-create/Industrial-maintenance-request-system)
+
+</td>
+</tr>
+</table>
+
+</div>
+
+<hr>
+<!-- Practical experience -->
+<h2>💼 Practical Experience</h2>
+<h3>☀️ Solar PV — Hayleys Fentons</h3>
+<p>Hands-on exposure to solar PV project activities. I supported work around PV modules, inverter installations, DC / AC cabling, site coordination, safety briefings, and material documentation. The role gave me a real-world understanding of how a residential and small-commercial PV system moves from design through commissioning — including the paperwork that has to follow every install to satisfy both the customer and the utility.</p>
+<h3>🏭 Industrial Maintenance — MAS Vidiyal</h3>
+<p>I supported general maintenance activities and equipment monitoring at an industrial site. Day-to-day work included maintenance reporting, preventive maintenance follow-through, and structured documentation of equipment conditions and breakdowns. This is where I first saw the gap between <em>doing</em> maintenance and <em>documenting</em> maintenance — which is exactly what the HVAC and maintenance-request repositories on this profile try to close.</p>
+<hr>
+<!-- Currently learning -->
+<h2>📈 Currently Learning (2026)</h2>
+<p align="center">
+  <img src="https://img.shields.io/badge/PLC%20Fundamentals-In%20Progress-F5B800?style=flat-square" alt="PLC"/>
+  <img src="https://img.shields.io/badge/AutoCAD%20Electrical-Planning-0A4D8C?style=flat-square" alt="AutoCAD"/>
+  <img src="https://img.shields.io/badge/MATLAB-Exploring-F5B800?style=flat-square" alt="MATLAB"/>
+  <img src="https://img.shields.io/badge/Power%20BI-Learning-0A4D8C?style=flat-square" alt="Power BI"/>
+  <img src="https://img.shields.io/badge/ESP32%20IoT-Building-F5B800?style=flat-square" alt="ESP32"/>
+</p>
+
+<p><strong>2026 Goals:</strong></p>
+<ul>
+<li>[ ] Strengthen electrical fundamentals and troubleshooting skills through hands-on lab work.</li>
+<li>[ ] Complete a production-grade ESP32 monitoring project with cloud telemetry.</li>
+<li>[ ] Build a structured engineering portfolio with clear, repeatable documentation patterns.</li>
+<li>[ ] Develop at least one full automation solution combining sensors, control logic, and a dashboard.</li>
+<li>[ ] Grow as a problem-solving engineer who documents technical work to a professional standard.</li>
+</ul>
+<hr>
+<!-- GitHub stats -->
+<h2>📊 GitHub Stats</h2>
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=nicksananton0923-create&show_icons=true&theme=chartreuse-dark&hide_border=true&title_color=F5B800&icon_color=0A4D8C&text_color=ffffff&bg_color=0f172a" width="48%" alt="GitHub stats" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=nicksananton0923-create&theme=chartreuse-dark&hide_border=true&ring=F5B800&fire=0A4D8C&currLabel=Current%20Streak" width="48%" alt="GitHub streak" />
+
+</div>
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nicksananton0923-create&layout=compact&theme=chartreuse-dark&hide_border=true&title_color=F5B800&bg_color=0f172a" width="60%" alt="Top languages" />
+
+</div>
+
+<hr>
+<!-- Connect -->
+<h2>🤝 Connect</h2>
+<p>
+  <a href="https://github.com/nicksananton0923-create"><img src="https://img.shields.io/badge/GitHub-@nicksananton0923--create-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
+  <a href="[YOUR-LINKEDIN-URL]"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A69C0?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="mailto:[YOUR-EMAIL]"><img src="https://img.shields.io/badge/Email-Contact%20Me-F5B800?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="[YOUR-PORTFOLIO-URL]"><img src="https://img.shields.io/badge/Portfolio-View-0A4D8C?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
+</p>
+
+<hr>
+<div align="center">
+
+**⚡ Learning every day. Building practical skills. Creating solutions with purpose. ⚡**
+
+</div>
+
+<p><img src="https://capsule-render.vercel.app/api?type=waving&color=0A4D8C&height=120&section=footer" width="100%" alt="footer banner" /></p></div></section><section class="readme-section"><div class="section-banner"><span class="section-tag">REPO · industrial-air-quality-monitor</span><a class="section-url" href="https://github.com/nicksananton0923-create/industrial-air-quality-monitor">https://github.com/nicksananton0923-create/industrial-air-quality-monitor</a></div><div class="markdown-body"><!-- ================================================================== -->
+<!-- industrial-air-quality-monitor · README.md                            -->
+<!-- Arduino Nano · Multi-sensor air quality + alert system                -->
+<!-- ================================================================== -->
+
+<div align="center">
+
+# ⚡ Industrial Air Quality Monitor
+
+**Arduino Nano-based industrial air-quality monitoring and alert system**
+
+<p>
+  <a href="https://github.com/nicksananton0923-create/industrial-air-quality-monitor/stargazers"><img src="https://img.shields.io/github/stars/nicksananton0923-create/industrial-air-quality-monitor?style=flat-square&color=F5B800" alt="Stars"/></a>
+  <a href="https://github.com/nicksananton0923-create/industrial-air-quality-monitor/network/members"><img src="https://img.shields.io/github/forks/nicksananton0923-create/industrial-air-quality-monitor?style=flat-square&color=0A4D8C" alt="Forks"/></a>
+  <img src="https://img.shields.io/github/last-commit/nicksananton0923-create/industrial-air-quality-monitor?style=flat-square&color=F5B800" alt="Last commit"/>
+  <img src="https://img.shields.io/badge/Language-C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++"/>
+  <img src="https://img.shields.io/badge/Platform-Arduino%20Nano-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Arduino Nano"/>
+  <img src="https://img.shields.io/badge/Status-Prototype%20%E2%80%93%20Educational-F5B800?style=flat-square" alt="Status"/>
+</p>
+
+</div>
+
+<hr>
+<h2>📋 Table of Contents</h2>
+<ul>
+<li><a href="#-overview">Overview</a></li>
+<li><a href="#-background">Background</a></li>
+<li><a href="#-key-features">Key Features</a></li>
+<li><a href="#-hardware-components">Hardware Components</a></li>
+<li><a href="#-system-architecture">System Architecture</a></li>
+<li><a href="#-repository-structure">Repository Structure</a></li>
+<li><a href="#-getting-started">Getting Started</a></li>
+<li><a href="#-usage">Usage</a></li>
+<li><a href="#-safety--compliance-notes">Safety &amp; Compliance Notes</a></li>
+<li><a href="#-roadmap">Roadmap</a></li>
+<li><a href="#-license">License</a></li>
+</ul>
+<hr>
+<h2>📝 Overview</h2>
+<p>The <strong>Industrial Air Quality Monitor</strong> is a compact embedded system built around the Arduino Nano that measures several airborne parameters relevant to industrial environments — including particulate matter, gas concentration, temperature, and humidity — and raises an alert when any reading crosses a pre-set safety threshold. The project was developed as an educational prototype to demonstrate how low-cost open-source hardware can be assembled into a serious monitoring instrument suitable for workshops, factory floors, storage rooms, or any space where airborne contaminants can affect worker safety or product quality.</p>
+<p>What makes this repository different from a typical Arduino demo is the documentation discipline behind it. Every sensor in the build has its operating range, calibration expectations, and known limitations written down so that a reader can decide whether the prototype is suitable for their own context. Threshold values are clearly marked as configurable and the alert logic is split out from the sensing logic so that the same firmware can be reused across different sensor combinations without rewriting the core flow. This makes the project a starting point that can be adapted to gas-specific hazards (CO, CO₂, VOC, dust) rather than a one-off build that only runs on a workbench.</p>
+<p>The system is intended as an <strong>educational demonstration</strong>, not a certified industrial safety instrument. It is suitable for student labs, learning projects, and proof-of-concept deployments. Anyone who needs to deploy air-quality monitoring in a regulated industrial environment should use certified, calibrated commercial instruments and follow local occupational health and safety regulations.</p>
+<hr>
+<h2>🔭 Background</h2>
+<p>In industrial environments, airborne hazards are among the most difficult risks to manage because they are invisible and accumulate gradually. Workers may be exposed to elevated levels of particulate matter, hazardous gases, or simply to environments where temperature and humidity drift outside a safe band — and there is often no obvious warning until symptoms appear. A small, low-cost monitoring device placed in the right location can provide an early warning that protects both people and equipment, but most commercial options are either too expensive for distributed deployment or too opaque to adapt.</p>
+<p>This project was built to address two practical gaps at the same time: first, the need for a low-cost, visible, and audible warning when air quality crosses a threshold; second, the need for a documented, repeatable build that an electrical technology student can read end-to-end and understand. By keeping the firmware modular and the documentation honest about sensor limitations, the repository supports both goals without overpromising what hobby-grade sensors can actually deliver.</p>
+<hr>
+<h2>✨ Key Features</h2>
+<ul>
+<li><strong>Multi-sensor air-quality monitoring</strong> — integrates gas, particulate, temperature, and humidity sensors on a single Arduino Nano, with each sensor polled on its own recommended interval. The design intentionally separates the <em>sensing</em> layer from the <em>alerting</em> layer so that swapping sensors only requires updating the relevant module, not rewriting the main loop.</li>
+<li><strong>Threshold-based alert system</strong> — every measured parameter has a configurable safe range defined in a single configuration section at the top of the firmware. When any reading falls outside its safe range, the system triggers a visible (LED) and audible (buzzer) alarm. Thresholds can be tuned for different environments without modifying the alert logic itself.</li>
+<li><strong>Real-time serial output</strong> — all sensor readings are written to the serial monitor in a simple key:value format, making it easy to log readings, plot trends, or pipe the data into a PC-side dashboard for further analysis. The format is intentionally human-readable so that troubleshooting does not require a custom tool.</li>
+<li><strong>Modular firmware structure</strong> — the codebase is split into clearly named modules (sensor drivers, threshold configuration, alert manager, main loop) rather than a single monolithic <code>.ino</code> file. This keeps the firmware readable and makes it straightforward to extend the system with new sensors or different output channels (LCD, Wi-Fi, SD card logging).</li>
+<li><strong>Compact, low-power build</strong> — designed around the Arduino Nano so the full system fits in a small enclosure and can be powered from a standard 5 V USB source or a 7–12 V DC adapter. This makes it practical to deploy in multiple rooms without significant wiring work.</li>
+</ul>
+<hr>
+<h2>🔌 Hardware Components</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Component</th>
+<th>Role</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Controller</td>
+<td>Arduino Nano (ATmega328P)</td>
+<td>Main MCU, runs firmware</td>
+<td>5 V logic, USB-powered</td>
+</tr>
+<tr>
+<td>Particulate</td>
+<td>SDS011 or similar PM sensor</td>
+<td>PM2.5 / PM10 measurement</td>
+<td>UART interface</td>
+</tr>
+<tr>
+<td>Gas</td>
+<td>MQ-series sensor (e.g. MQ-135)</td>
+<td>Broad gas concentration reading</td>
+<td>Analog output, requires calibration</td>
+</tr>
+<tr>
+<td>Climate</td>
+<td>DHT22 (or DHT11)</td>
+<td>Temperature + humidity</td>
+<td>Single-wire digital interface</td>
+</tr>
+<tr>
+<td>Alert — visual</td>
+<td>LED (red + green)</td>
+<td>Status indicator</td>
+<td>Green = OK, Red = alarm</td>
+</tr>
+<tr>
+<td>Alert — audible</td>
+<td>Piezo buzzer</td>
+<td>Audible alarm on threshold breach</td>
+<td>Active or passive, configurable</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>5 V USB or 7–12 V DC jack</td>
+<td>System power</td>
+<td>USB is sufficient for development</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Component choices are intentionally flexible. The firmware is structured so that an alternate sensor with a similar interface can be substituted without rewriting the main loop.</p>
+</blockquote>
+<hr>
+<h2>🧱 System Architecture</h2>
+<pre><code>        ┌─────────────┐    ┌──────────────┐    ┌──────────────┐
+Sensors │  PM sensor  │    │  Gas sensor  │    │  DHT22 (T/RH)│
+        └──────┬──────┘    └──────┬───────┘    └──────┬───────┘
+               │                  │                   │
+               ▼                  ▼                   ▼
+        ┌───────────────────────────────────────────────────┐
+        │            Arduino Nano (main controller)          │
+        │  ┌─────────────┐  ┌────────────┐  ┌─────────────┐  │
+        │  │  Sensor     │  │  Threshold │  │   Alert     │  │
+        │  │  readers    │→ │  checker    │→ │  manager    │  │
+        │  └─────────────┘  └────────────┘  └─────────────┘  │
+        └────────────┬─────────────────────────────┬─────────┘
+                     │                              │
+                     ▼                              ▼
+              ┌─────────────┐               ┌─────────────┐
+              │  Serial USB  │               │  LED + Buzzer│
+              │  (logging)   │               │  (alarm)     │
+              └─────────────┘               └─────────────┘
+</code></pre>
+<p>The architecture follows a <strong>sense → check → alert</strong> pipeline. Each sensor module produces a reading on its own cadence, hands it to the threshold checker, which compares it against the configured safe range, and the alert manager decides whether to raise, hold, or clear the alarm. Serial output runs in parallel so the user always sees the live readings regardless of alarm state. This separation is the key to the firmware's reusability: a different sensor only changes the first block, a different alarm mechanism only changes the last block.</p>
+<hr>
+<h2>📂 Repository Structure</h2>
+<pre><code>industrial-air-quality-monitor/
+├── README.md                  # This file
+├── /firmware                  # Arduino .ino source
+│   ├── air_quality_monitor.ino
+│   └── /modules                # Sensor drivers, threshold, alert
+├── /docs
+│   ├── wiring-guide.md         # Pin-by-pin wiring reference
+│   ├── sensor-notes.md        # Calibration + limitations per sensor
+│   └── threshold-config.md    # How to tune thresholds
+├── /data
+│   └── sample-reading-log.csv  # Sample anonymized serial output
+└── LICENSE
+</code></pre>
+<blockquote>
+<p>If your current repository does not yet have all these folders, use this structure as the target layout. Add folders as you build out the documentation — do not delete existing files.</p>
+</blockquote>
+<hr>
+<h2>🚀 Getting Started</h2>
+<h3>Prerequisites</h3>
+<ul>
+<li>Arduino IDE 1.8.13 or newer (or Arduino CLI)</li>
+<li>Arduino Nano board (or compatible clone with the same MCU)</li>
+<li>USB cable for programming and serial monitoring</li>
+<li>Sensors listed in <em>Hardware Components</em> above</li>
+</ul>
+<h3>Installation</h3>
+<ol>
+<li>
+<p><strong>Clone the repository</strong><br>
+<code>bash
+   git clone https://github.com/nicksananton0923-create/industrial-air-quality-monitor.git
+   cd industrial-air-quality-monitor</code></p>
+</li>
+<li>
+<p><strong>Open the firmware in Arduino IDE</strong><br>
+   - Open <code>firmware/air_quality_monitor.ino</code> in the Arduino IDE.<br>
+   - From <em>Tools → Board</em>, select <strong>Arduino Nano</strong>.<br>
+   - From <em>Tools → Processor</em>, select the matching variant (e.g. ATmega328P).<br>
+   - From <em>Tools → Port</em>, select the USB port the Nano is connected to.</p>
+</li>
+<li>
+<p><strong>Install required libraries</strong><br>
+   - Use <em>Sketch → Include Library → Manage Libraries</em> and install any libraries referenced in the firmware (e.g. the DHT sensor library by Adafruit).</p>
+</li>
+<li>
+<p><strong>Wire the sensors</strong> following the wiring guide in <code>docs/wiring-guide.md</code>.</p>
+</li>
+<li>
+<p><strong>Upload the firmware</strong> and open the Serial Monitor at the baud rate declared at the top of the sketch (default 9600).</p>
+</li>
+</ol>
+<hr>
+<h2>🎯 Usage</h2>
+<p>Once the firmware is uploaded and the sensors are wired, the monitor runs autonomously. The default operating loop is:</p>
+<ol>
+<li>Each sensor is polled on its recommended interval (e.g. DHT22 every 2 seconds, PM sensor every 1 second).</li>
+<li>Readings are printed to the serial monitor in <code>key:value</code> format.</li>
+<li>Each reading is compared to its configured threshold.</li>
+<li>If any reading breaches its threshold, the LED turns red and the buzzer pulses.</li>
+<li>When all readings return to safe range, the alarm clears and the LED returns to green.</li>
+</ol>
+<p>To customize thresholds, edit the configuration block at the top of <code>air_quality_monitor.ino</code>:</p>
+<pre><code class="language-cpp">// === Threshold configuration ===
+const float PM25_MAX   = 35.0;   // µg/m³
+const float PM10_MAX   = 75.0;   // µg/m³
+const float GAS_MAX    = 400.0;  // ppm (sensor-specific)
+const float TEMP_MIN   = 15.0;   // °C
+const float TEMP_MAX   = 35.0;   // °C
+const float HUM_MIN    = 30.0;   // %
+const float HUM_MAX    = 70.0;   // %
+</code></pre>
+<hr>
+<h2>⚠️ Safety &amp; Compliance Notes</h2>
+<ul>
+<li><strong>Educational use only.</strong> This device is not a certified industrial safety instrument. Do not use it as the sole means of hazard detection in a regulated environment.</li>
+<li><strong>Sensor calibration.</strong> MQ-series gas sensors require warm-up time and periodic calibration. Readings from these sensors are indicative, not laboratory-grade. Always cross-check against a calibrated reference instrument before relying on the numbers.</li>
+<li><strong>Threshold tuning.</strong> Default thresholds are illustrative. Real industrial deployments should follow the workplace exposure limits published by the relevant occupational health authority in your jurisdiction.</li>
+<li><strong>Power safety.</strong> Use a properly rated power supply. For continuous deployment, prefer a regulated 5 V DC source over USB power from a PC.</li>
+</ul>
+<hr>
+<h2>🗺 Roadmap</h2>
+<ul>
+<li>[ ] Add a small OLED display for local readout of current values.</li>
+<li>[ ] Add an SD card module for offline logging when no PC is connected.</li>
+<li>[ ] Add an ESP32 variant with Wi-Fi telemetry to a simple dashboard.</li>
+<li>[ ] Add a calibration helper sketch to simplify MQ sensor baseline tuning.</li>
+<li>[ ] Add a chart-friendly CSV export format for downstream Excel / Power BI analysis.</li>
+</ul>
+<hr>
+<h2>📄 License</h2>
+<p>This project is released under the MIT License unless a separate <code>LICENSE</code> file in the repository specifies otherwise. See the repository root for the actual license text.</p>
+<hr>
+<div align="center">
+
+**⚡ Built for learning. Documented for the next engineer. ⚡**
+
+<sub>Project by [@nicksananton0923-create](https://github.com/nicksananton0923-create) · Electrical Technology · Renewable Energy · Automation</sub>
+
+</div></div></section><section class="readme-section"><div class="section-banner"><span class="section-tag">REPO · Industrial-hvac-maintenance</span><a class="section-url" href="https://github.com/nicksananton0923-create/Industrial-hvac-maintenance">https://github.com/nicksananton0923-create/Industrial-hvac-maintenance</a></div><div class="markdown-body"><!-- ================================================================== -->
+<!-- Industrial-hvac-maintenance · README.md                                -->
+<!-- Professional HVAC maintenance documentation framework                  -->
+<!-- ================================================================== -->
+
+<div align="center">
+
+# 🏭 Industrial HVAC Maintenance
+
+**Professional HVAC, Chiller, AHU &amp; Cooling System maintenance documentation framework**
+
+<p>
+  <a href="https://github.com/nicksananton0923-create/Industrial-hvac-maintenance/stargazers"><img src="https://img.shields.io/github/stars/nicksananton0923-create/Industrial-hvac-maintenance?style=flat-square&color=F5B800" alt="Stars"/></a>
+  <a href="https://github.com/nicksananton0923-create/Industrial-hvac-maintenance/network/members"><img src="https://img.shields.io/github/forks/nicksananton0923-create/Industrial-hvac-maintenance?style=flat-square&color=0A4D8C" alt="Forks"/></a>
+  <img src="https://img.shields.io/github/last-commit/nicksananton0923-create/Industrial-hvac-maintenance?style=flat-square&color=F5B800" alt="Last commit"/>
+  <img src="https://img.shields.io/badge/Format-CSV%20%2F%20Markdown-0A4D8C?style=flat-square" alt="Format"/>
+  <img src="https://img.shields.io/badge/Records-12%2B%20templates-F5B800?style=flat-square" alt="Records"/>
+  <img src="https://img.shields.io/badge/Domain-HVAC%20%2F%20Building%20Services-0A4D8C?style=flat-square" alt="Domain"/>
+</p>
+
+</div>
+
+<hr>
+<h2>📋 Table of Contents</h2>
+<ul>
+<li><a href="#-overview">Overview</a></li>
+<li><a href="#-background--motivation">Background &amp; Motivation</a></li>
+<li><a href="#-whats-inside">What's Inside</a></li>
+<li><a href="#-repository-structure">Repository Structure</a></li>
+<li><a href="#-templates-csv">Templates (CSV)</a></li>
+<li><a href="#-documentation-markdown">Documentation (Markdown)</a></li>
+<li><a href="#-diagrams-png">Diagrams (PNG)</a></li>
+<li><a href="#-getting-started">Getting Started</a></li>
+<li><a href="#-how-to-use-the-templates">How to Use the Templates</a></li>
+<li><a href="#-safety--accuracy">Safety &amp; Accuracy</a></li>
+<li><a href="#-roadmap">Roadmap</a></li>
+<li><a href="#-license">License</a></li>
+</ul>
+<hr>
+<h2>📝 Overview</h2>
+<p>The <strong>Industrial HVAC Maintenance</strong> repository is a complete documentation framework for organizing and managing maintenance work on industrial heating, ventilation, air-conditioning, and cooling systems. It contains reusable CSV templates for every common record a building-services team needs — asset registers, chiller service records, AHU inspection checklists, cooling-tower logs, fault and corrective action logs, preventive maintenance schedules, and more — alongside Markdown documentation that explains the purpose of each field, the methodology behind each inspection, and how the templates fit into a coherent maintenance program.</p>
+<p>This is not a software project in the traditional sense; it is a structured set of files that an HVAC maintenance team, a building services manager, or a student of facility engineering can drop into a shared folder and start using immediately. The templates are deliberately vendor-neutral and use plain column names so they open cleanly in Excel, Google Sheets, LibreOffice Calc, or any CSV-aware tool. Every record includes clear field descriptions, sensible defaults, and explicit notes on which fields are mandatory versus optional, which makes them easy to onboard for new technicians without long training sessions.</p>
+<p>The repository is being built incrementally — every file that exists is already production-useful, and every file that is still on the roadmap is explicitly called out in the <em>Roadmap</em> section. Nothing in this repository should be considered final until it has been reviewed by a qualified maintenance engineer for the specific equipment and jurisdiction in which it will be used.</p>
+<hr>
+<h2>🔭 Background &amp; Motivation</h2>
+<p>Industrial HVAC systems — chillers, air handling units, cooling towers, pumps, fans, and the control networks that tie them together — represent some of the most expensive and most failure-prone equipment in any modern building. A single chiller failure can take an entire process plant offline; a single poorly documented AHU inspection can mean a filter is replaced a month late, an indoor-air-quality complaint is dismissed, or a bearing fails without warning. The cost of these events is almost always higher than the cost of the documentation that would have prevented them.</p>
+<p>And yet, in many facilities, maintenance records are scattered: some live on paper, some live in spreadsheets, some live in the heads of senior technicians, and some are not recorded at all. The result is that when a technician leaves, knowledge walks out the door; when an audit arrives, no one can prove what was inspected and when; and when a fault recurs, no one can trace whether the same fault has been seen before. This repository was built to provide a simple, reusable starting point for fixing that gap. It does not replace a full CMMS, but it gives a team a structured, vendor-neutral place to start collecting records in a consistent format — which is the first step toward any future digital system.</p>
+<hr>
+<h2>📦 What's Inside</h2>
+<p>This repository currently includes:</p>
+<ul>
+<li><strong>12 CSV templates</strong> covering the full maintenance record lifecycle from asset registration through inspection, service, fault logging, and preventive maintenance scheduling.</li>
+<li><strong>6 Markdown documentation files</strong> covering system overviews, inspection methodology, preventive maintenance planning, recordkeeping practice, control logic and wiring, and safety and compliance.</li>
+<li><strong>5 PNG diagrams</strong> including the refrigerant cycle, chilled-water system, BMS network architecture, control wiring block, and a Gantt-style preventive maintenance schedule.</li>
+<li><strong>1 anonymized sample records file</strong> so readers can see what a completed dataset looks like without exposing any real facility data.</li>
+<li><strong>Standard project files</strong> — <code>CHANGELOG.md</code>, <code>CONTRIBUTING.md</code>, <code>LICENSE</code>, <code>.gitignore</code> — to make the repository straightforward to contribute to and fork.</li>
+</ul>
+<hr>
+<h2>📂 Repository Structure</h2>
+<pre><code>Industrial-hvac-maintenance/
+├── README.md                         # This file
+├── CHANGELOG.md                      # Version history
+├── CONTRIBUTING.md                   # How to contribute
+├── LICENSE                           # License file
+├── .gitignore
+│
+├── # === CSV templates ===
+├── hvac-asset-register.csv
+├── ahu-inspection-checklist.csv
+├── chiller-service-record.csv
+├── cooling-tower-log.csv
+├── filter-replacement-log.csv
+├── refrigerant-service-log.csv
+├── pump-fan-bearing-inspection.csv
+├── operating-readings.csv
+├── fault-corrective-log.csv
+├── preventive-maintenance-schedule.csv
+├── sample-records.csv                # Anonymized sample data
+│
+├── # === Markdown documentation ===
+├── system-overview.md
+├── inspection-methodology.md
+├── preventive-maintenance-planning.md
+├── recordkeeping-guide.md
+├── control-logic-and-wiring.md
+├── safety-and-compliance.md
+│
+└── # === Diagrams (PNG) ===
+    ├── refrigerant-cycle.png
+    ├── chilled-water-system.png
+    ├── bms-network-architecture.png
+    ├── control-wiring-block.png
+    └── pm-schedule-gantt.png
+</code></pre>
+<hr>
+<h2>📊 Templates (CSV)</h2>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hvac-asset-register.csv</code></td>
+<td>Master list of every HVAC asset: ID, location, type, model, serial, install date, OEM, service contact.</td>
+</tr>
+<tr>
+<td><code>ahu-inspection-checklist.csv</code></td>
+<td>Air handling unit inspection: filter, coil, belt, fan, drain pan, dampers.</td>
+</tr>
+<tr>
+<td><code>chiller-service-record.csv</code></td>
+<td>Chiller service log: refrigerant, oil, electrical, controls, performance.</td>
+</tr>
+<tr>
+<td><code>cooling-tower-log.csv</code></td>
+<td>Cooling tower inspection: water treatment, fill, drift eliminator, fan.</td>
+</tr>
+<tr>
+<td><code>filter-replacement-log.csv</code></td>
+<td>Filter cleaning / replacement history: asset, type, pressure drop, date, technician.</td>
+</tr>
+<tr>
+<td><code>refrigerant-service-log.csv</code></td>
+<td>Refrigerant handling: type, quantity added / removed, leak check, technician certification.</td>
+</tr>
+<tr>
+<td><code>pump-fan-bearing-inspection.csv</code></td>
+<td>Bearing inspection: vibration, temperature, lubrication, sound.</td>
+</tr>
+<tr>
+<td><code>operating-readings.csv</code></td>
+<td>Routine operating readings: temperature, pressure, humidity, flow, current.</td>
+</tr>
+<tr>
+<td><code>fault-corrective-log.csv</code></td>
+<td>Fault and corrective action log: symptom, cause, action, parts, downtime.</td>
+</tr>
+<tr>
+<td><code>preventive-maintenance-schedule.csv</code></td>
+<td>PM schedule: asset, task, frequency, last done, next due, responsible.</td>
+</tr>
+<tr>
+<td><code>sample-records.csv</code></td>
+<td>Anonymized sample rows showing how the templates are used in practice.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Each CSV uses simple, plain-English column headers and includes a header row that any spreadsheet tool can read directly. Field meanings and recommended conventions are documented in <code>recordkeeping-guide.md</code>.</p>
+</blockquote>
+<hr>
+<h2>📄 Documentation (Markdown)</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>system-overview.md</code></td>
+<td>High-level overview of an industrial HVAC system and its components.</td>
+</tr>
+<tr>
+<td><code>inspection-methodology.md</code></td>
+<td>How to inspect each component type — what to look at, in what order, and what to record.</td>
+</tr>
+<tr>
+<td><code>preventive-maintenance-planning.md</code></td>
+<td>How to build a PM schedule from the templates, including frequency selection and prioritization.</td>
+</tr>
+<tr>
+<td><code>recordkeeping-guide.md</code></td>
+<td>The reference for every column in every CSV — mandatory vs. optional, units, and example values.</td>
+</tr>
+<tr>
+<td><code>control-logic-and-wiring.md</code></td>
+<td>Notes on BMS / control logic and wiring conventions, including the diagrams below.</td>
+</tr>
+<tr>
+<td><code>safety-and-compliance.md</code></td>
+<td>Safety reminders, refrigerant handling rules, and confidentiality guidance.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>🖼 Diagrams (PNG)</h2>
+<table>
+<thead>
+<tr>
+<th>Diagram</th>
+<th>What it shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>refrigerant-cycle.png</code></td>
+<td>Standard vapor-compression refrigerant cycle with labeled components.</td>
+</tr>
+<tr>
+<td><code>chilled-water-system.png</code></td>
+<td>Chilled water loop: chiller, pumps, AHU coils, expansion tank.</td>
+</tr>
+<tr>
+<td><code>bms-network-architecture.png</code></td>
+<td>BMS / BACnet network architecture with controllers and field devices.</td>
+</tr>
+<tr>
+<td><code>control-wiring-block.png</code></td>
+<td>Block diagram of typical HVAC control wiring conventions.</td>
+</tr>
+<tr>
+<td><code>pm-schedule-gantt.png</code></td>
+<td>Gantt-style representation of a typical annual PM schedule.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>🚀 Getting Started</h2>
+<h3>As a maintenance team</h3>
+<ol>
+<li><strong>Clone or download</strong> the repository:<br>
+<code>bash
+   git clone https://github.com/nicksananton0923-create/Industrial-hvac-maintenance.git</code></li>
+<li><strong>Pick the templates you need</strong> — most teams start with <code>hvac-asset-register.csv</code>, <code>ahu-inspection-checklist.csv</code>, and <code>fault-corrective-log.csv</code>.</li>
+<li><strong>Open the CSVs in Excel, Google Sheets, or LibreOffice Calc</strong> — the headers are plain English and the templates are immediately usable.</li>
+<li><strong>Read <code>recordkeeping-guide.md</code></strong> to understand every column before you start filling the templates with real data.</li>
+<li><strong>Replace sample data carefully</strong> — never commit confidential facility readings to a public fork. Use anonymized copies for any shared version.</li>
+</ol>
+<h3>As a student</h3>
+<ol>
+<li>Read <code>system-overview.md</code> first for the big picture.</li>
+<li>Read <code>inspection-methodology.md</code> to understand how each component is actually inspected.</li>
+<li>Open the CSVs to see how records are structured.</li>
+<li>Read <code>recordkeeping-guide.md</code> to understand why each field exists.</li>
+<li>Try filling in <code>sample-records.csv</code> with hypothetical data to test your understanding.</li>
+</ol>
+<hr>
+<h2>🎯 How to Use the Templates</h2>
+<ul>
+<li><strong>One row per record.</strong> Each CSV is structured so one row represents one event (one inspection, one service, one fault). This keeps the data tidy and easy to filter or chart.</li>
+<li><strong>Asset IDs are sacred.</strong> Use the same asset ID across every CSV so records can be joined. The asset register is the source of truth for what each ID means.</li>
+<li><strong>Units must be explicit.</strong> Every numeric field has a documented unit in <code>recordkeeping-guide.md</code>. Never write a number without a unit, and never mix units in the same column.</li>
+<li><strong>Dates are ISO 8601.</strong> Use <code>YYYY-MM-DD</code> for all dates so the CSVs sort and filter correctly across locales.</li>
+<li><strong>Technician and signature.</strong> Every record has a <code>technician</code> column and (where applicable) a <code>reviewed_by</code> column. Accountability is the whole point.</li>
+</ul>
+<hr>
+<h2>⚠️ Safety &amp; Accuracy</h2>
+<ul>
+<li><strong>Refrigerant handling must be done by certified personnel.</strong> The <code>refrigerant-service-log.csv</code> template is for record-keeping only — filling it in does not authorize anyone to handle refrigerants.</li>
+<li><strong>HVAC electrical work is hazardous.</strong> Any template that includes electrical readings assumes the work is being done by a qualified electrician or technician.</li>
+<li><strong>OEM manuals override these templates.</strong> Equipment-specific limits, service intervals, and procedures from the OEM manual always take precedence. These templates are vendor-neutral; they cannot capture every model-specific requirement.</li>
+<li><strong>Confidentiality.</strong> Never commit real facility readings, customer names, or proprietary information to a public repository. Use the <code>sample-records.csv</code> pattern as a guide for anonymizing your own data.</li>
+</ul>
+<hr>
+<h2>🗺 Roadmap</h2>
+<ul>
+<li>[ ] Add <code>boiler-inspection-checklist.csv</code> for heating-side coverage.</li>
+<li>[ ] Add <code>iaq-monitoring-log.csv</code> for indoor air-quality readings.</li>
+<li>[ ] Add a dashboard build guide (Excel / Power BI) that visualizes the CSVs.</li>
+<li>[ ] Add a Python utility script to validate CSVs against the schema in <code>recordkeeping-guide.md</code>.</li>
+<li>[ ] Translate key documentation into Tamil for bilingual use.</li>
+</ul>
+<hr>
+<h2>📄 License</h2>
+<p>This project is released under the MIT License unless the <code>LICENSE</code> file in the repository root specifies otherwise. The templates and documentation are free to use, modify, and distribute — including for commercial facility maintenance work — provided the license terms are respected.</p>
+<hr>
+<div align="center">
+
+**🏭 Document it once. Find it forever. 🏭**
+
+<sub>Project by [@nicksananton0923-create](https://github.com/nicksananton0923-create) · Electrical Technology · Renewable Energy · Automation</sub>
+
+</div></div></section><section class="readme-section"><div class="section-banner"><span class="section-tag">REPO · Industrial-maintenance-request-system</span><a class="section-url" href="https://github.com/nicksananton0923-create/Industrial-maintenance-request-system">https://github.com/nicksananton0923-create/Industrial-maintenance-request-system</a></div><div class="markdown-body"><!-- ================================================================== -->
+<!-- Industrial-maintenance-request-system · README.md                     -->
+<!-- Digital CMMS for work requests, assignments & work-order tracking     -->
+<!-- ================================================================== -->
+
+<div align="center">
+
+# 🔧 Industrial Maintenance Request System
+
+**Digital maintenance management — work requests, technician assignments, work-order tracking & reporting**
+
+<p>
+  <a href="https://github.com/nicksananton0923-create/Industrial-maintenance-request-system/stargazers"><img src="https://img.shields.io/github/stars/nicksananton0923-create/Industrial-maintenance-request-system?style=flat-square&color=F5B800" alt="Stars"/></a>
+  <a href="https://github.com/nicksananton0923-create/Industrial-maintenance-request-system/network/members"><img src="https://img.shields.io/github/forks/nicksananton0923-create/Industrial-maintenance-request-system?style=flat-square&color=0A4D8C" alt="Forks"/></a>
+  <img src="https://img.shields.io/github/last-commit/nicksananton0923-create/Industrial-maintenance-request-system?style=flat-square&color=F5B800" alt="Last commit"/>
+  <img src="https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/Type-CMMS-0A4D8C?style=flat-square" alt="CMMS"/>
+  <img src="https://img.shields.io/badge/Status-Active%20Development-F5B800?style=flat-square" alt="Status"/>
+</p>
+
+</div>
+
+<hr>
+<h2>📋 Table of Contents</h2>
+<ul>
+<li><a href="#-overview">Overview</a></li>
+<li><a href="#-background">Background</a></li>
+<li><a href="#-key-features">Key Features</a></li>
+<li><a href="#-architecture">Architecture</a></li>
+<li><a href="#-repository-structure">Repository Structure</a></li>
+<li><a href="#-data-model">Data Model</a></li>
+<li><a href="#-getting-started">Getting Started</a></li>
+<li><a href="#-usage">Usage</a></li>
+<li><a href="#-configuration">Configuration</a></li>
+<li><a href="#-security--privacy">Security &amp; Privacy</a></li>
+<li><a href="#-roadmap">Roadmap</a></li>
+<li><a href="#-license">License</a></li>
+</ul>
+<hr>
+<h2>📝 Overview</h2>
+<p>The <strong>Industrial Maintenance Request System</strong> is a lightweight Computerized Maintenance Management System (CMMS) designed for small and medium industrial facilities that need a structured way to handle maintenance work requests without investing in a heavy enterprise platform. The system covers the full lifecycle of a maintenance task: a worker submits a request, a supervisor reviews and approves it, a technician is assigned, the work is carried out and documented, the work order is closed, and the resulting record is archived for future reporting and audit. Every step is logged so that the team can later answer questions such as "how long did this fault take to close?", "which technician closed the most work orders last month?", or "which asset is generating the most repeat requests?".</p>
+<p>The project is built in JavaScript because the front-end needs to be approachable for any team member to use on a phone, tablet, or laptop, and because the underlying data model is simple enough that a heavier stack would add more complexity than value. The interface focuses on clarity over feature density: a maintenance technician opening the system on a phone in a noisy plant room should be able to see exactly what is assigned to them today and update a work order status with two taps, not navigate a multi-level menu.</p>
+<p>This repository is being built incrementally, with the data model and core workflow documented first and the user interface layers added on top. Every planned feature is listed in the <em>Roadmap</em> so that readers can see what already works and what is still in progress. Nothing in the system should be considered production-ready until it has been reviewed for the specific facility where it will be deployed, including any required access controls, backups, and integration with existing site systems.</p>
+<hr>
+<h2>🔭 Background</h2>
+<p>In most small industrial facilities, maintenance requests flow through some combination of paper forms, phone calls, WhatsApp messages, and whiteboards. Each of those channels has the same fundamental problem: there is no structured record. A technician who receives a request by phone has no written record of what was requested, by whom, when, with what priority, or against which asset. When the same fault recurs a month later, no one can easily discover that it has been seen before. When a new technician joins the team, they have no documented history to learn from. When the facility manager is asked "how many breakdowns did we have last quarter?", the answer is usually a guess.</p>
+<p>A lightweight CMMS solves this by providing a single place where every maintenance request becomes a structured record. The request captures who asked, what they asked for, which asset is affected, how urgent it is, and when it was reported. The record then flows through a defined lifecycle — approved, assigned, in progress, completed, closed — with each transition logged with a timestamp and the responsible person. This gives the team an audit trail, a learning base, and a reporting surface that none of the ad-hoc channels can provide. The goal of this repository is to make that capability accessible to a small facility team without requiring them to evaluate, purchase, and integrate a commercial CMMS.</p>
+<hr>
+<h2>✨ Key Features</h2>
+<ul>
+<li><strong>Work request submission</strong> — any worker can submit a maintenance request from any device. The form captures the requester, the affected asset, the problem description, the urgency, and an optional photo. The form is intentionally short so that submission takes less than a minute.</li>
+<li><strong>Approval workflow</strong> — a supervisor reviews new requests and either approves, rejects, or requests more information. Approved requests are converted to work orders and made available for assignment. The approval step creates a paper trail and prevents the system from being flooded with low-value or duplicate requests.</li>
+<li><strong>Technician assignment</strong> — a supervisor assigns each work order to a technician. The technician sees their assigned work orders on their own dashboard, sorted by priority and due date.</li>
+<li><strong>Work order tracking</strong> — the technician updates the work order status as they progress: accepted, in progress, parts ordered, completed, cannot complete. Each status change is timestamped and logged. The technician can also record parts used, time spent, and a completion note.</li>
+<li><strong>Breakdown records</strong> — when a work order is a breakdown (unplanned failure) rather than a planned maintenance task, the system captures additional fields: downtime start, downtime end, root cause, corrective action, and parts replaced. This data feeds the breakdown analysis reports.</li>
+<li><strong>Reporting</strong> — built-in reports show open work orders by status, work orders closed per technician in a given period, top recurring assets, and total downtime by asset. Reports are exportable to CSV for further analysis.</li>
+<li><strong>Asset register integration</strong> — work orders are linked to a simple asset register so that historical work orders for any asset can be retrieved in one click. The asset register is the same one used by the HVAC and water-monitoring repositories, so all three systems share a common asset vocabulary.</li>
+</ul>
+<hr>
+<h2>🧱 Architecture</h2>
+<pre><code>┌──────────────────────────────────────────────────────────────┐
+│                       Browser (front-end)                      │
+│   ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐    │
+│   │  Request     │  │  Supervisor  │  │  Technician       │    │
+│   │  submission  │  │  dashboard   │  │  dashboard        │    │
+│   └──────────────┘  └──────────────┘  └──────────────────┘    │
+└─────────────────────────┬────────────────────────────────────┘
+                          │ HTTP / JSON
+┌─────────────────────────▼────────────────────────────────────┐
+│                    Server (Node / Express)                     │
+│   ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐    │
+│   │  Request     │  │  Work order  │  │  Reporting       │    │
+│   │  service    │  │  service     │  │  service          │    │
+│   └──────────────┘  └──────────────┘  └──────────────────┘    │
+└─────────────────────────┬────────────────────────────────────┘
+                          │
+┌─────────────────────────▼────────────────────────────────────┐
+│              Storage (file-based or SQLite)                   │
+│   requests.json · work_orders.json · assets.json              │
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<p>The system is intentionally storage-light: it can run on file-based JSON storage for a small team or be upgraded to SQLite when concurrency or reporting volume grows. This keeps deployment trivial — the system can be hosted on a small local server, a Raspberry Pi, or any low-cost container host.</p>
+<hr>
+<h2>📂 Repository Structure</h2>
+<pre><code>Industrial-maintenance-request-system/
+├── README.md
+├── package.json
+├── server.js                    # Node / Express entry point
+├── /src
+│   ├── /routes
+│   │   ├── requests.js         # Submit + list endpoints
+│   │   ├── work-orders.js      # Assignment + status update
+│   │   └── reports.js           # Reporting endpoints
+│   ├── /services
+│   │   ├── request-service.js
+│   │   ├── work-order-service.js
+│   │   └── report-service.js
+│   └── /storage
+│       ├── requests.json       # Local dev storage
+│       ├── work-orders.json
+│       └── assets.json
+├── /public                     # Front-end (HTML / CSS / JS)
+│   ├── index.html              # Request submission form
+│   ├── supervisor.html         # Supervisor dashboard
+│   └── technician.html         # Technician dashboard
+├── /docs
+│   ├── data-model.md           # Work request + work order schema
+│   ├── workflow.md             # Status lifecycle
+│   └── deployment.md           # How to deploy
+└── LICENSE
+</code></pre>
+<hr>
+<h2>🗃 Data Model</h2>
+<p>The system has three core entities:</p>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Purpose</th>
+<th>Key fields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Request</code></td>
+<td>A submitted maintenance request</td>
+<td>request_id, requester, asset_id, problem, urgency, status, created_at</td>
+</tr>
+<tr>
+<td><code>WorkOrder</code></td>
+<td>An approved request being worked on</td>
+<td>work_order_id, request_id, technician, status, parts, time_spent, completed_at</td>
+</tr>
+<tr>
+<td><code>Asset</code></td>
+<td>An item of equipment</td>
+<td>asset_id, name, location, type, install_date</td>
+</tr>
+</tbody>
+</table>
+<p>Requests become work orders on approval. Work orders are linked to assets so historical work orders can be retrieved per asset.</p>
+<hr>
+<h2>🚀 Getting Started</h2>
+<h3>Prerequisites</h3>
+<ul>
+<li>Node.js 18 or newer</li>
+<li>npm or yarn</li>
+</ul>
+<h3>Installation</h3>
+<ol>
+<li>
+<p><strong>Clone the repository</strong><br>
+<code>bash
+   git clone https://github.com/nicksananton0923-create/Industrial-maintenance-request-system.git
+   cd Industrial-maintenance-request-system</code></p>
+</li>
+<li>
+<p><strong>Install dependencies</strong><br>
+<code>bash
+   npm install</code></p>
+</li>
+<li>
+<p><strong>Start the server</strong><br>
+<code>bash
+   npm start</code></p>
+</li>
+<li>
+<p><strong>Open the app</strong> in your browser at <code>http://localhost:3000</code> (or the port shown in the console).</p>
+</li>
+<li>
+<p><strong>Open the request form</strong> at <code>/index.html</code>, the supervisor dashboard at <code>/supervisor.html</code>, and the technician dashboard at <code>/technician.html</code>.</p>
+</li>
+</ol>
+<hr>
+<h2>🎯 Usage</h2>
+<h3>Requester</h3>
+<p>Open the home page, fill in the request form (asset, problem, urgency, optional photo), and submit. You will receive a request ID that can be used to track status later.</p>
+<h3>Supervisor</h3>
+<p>Open the supervisor dashboard to see new requests awaiting approval. Approve or reject each request. Approved requests become work orders that can be assigned to a technician. Use the reports view to see open work orders, completed work orders, and recurring assets.</p>
+<h3>Technician</h3>
+<p>Open the technician dashboard to see work orders assigned to you, sorted by priority and due date. Update the status as you progress: accepted → in progress → completed. Record parts used, time spent, and a completion note before closing.</p>
+<hr>
+<h2>⚙️ Configuration</h2>
+<p>Configuration is stored in <code>config.json</code> at the repository root:</p>
+<pre><code class="language-json">{
+  &quot;port&quot;: 3000,
+  &quot;storage&quot;: &quot;file&quot;,
+  &quot;dataDir&quot;: &quot;./src/storage&quot;,
+  &quot;assetRegisterPath&quot;: &quot;./src/storage/assets.json&quot;,
+  &quot;defaultUrgencyLevels&quot;: [&quot;low&quot;, &quot;medium&quot;, &quot;high&quot;, &quot;critical&quot;],
+  &quot;defaultStatusFlow&quot;: [&quot;submitted&quot;, &quot;approved&quot;, &quot;assigned&quot;, &quot;in_progress&quot;, &quot;completed&quot;, &quot;closed&quot;]
+}
+</code></pre>
+<p>The <code>storage</code> field can be set to <code>file</code> (default) or <code>sqlite</code> to switch storage backends without changing application code.</p>
+<hr>
+<h2>🔒 Security &amp; Privacy</h2>
+<ul>
+<li><strong>Authentication.</strong> This prototype currently has no built-in authentication. Before deploying in a real facility, add at least a basic role-based login (requester / supervisor / technician / admin).</li>
+<li><strong>Backups.</strong> If you use file-based storage, back up the JSON files daily. If you use SQLite, back up the database file daily.</li>
+<li><strong>Confidentiality.</strong> Do not store personal data (full names, phone numbers) unless your facility's data protection policy permits it. Prefer employee IDs over names.</li>
+<li><strong>Audit logging.</strong> Every status change should be logged with the actor and timestamp. The data model includes this; make sure your deployment preserves it.</li>
+</ul>
+<hr>
+<h2>🗺 Roadmap</h2>
+<ul>
+<li>[ ] Add authentication + role-based access control.</li>
+<li>[ ] Add a SQLite storage backend.</li>
+<li>[ ] Add CSV export for all reports.</li>
+<li>[ ] Add email / SMS notifications on assignment.</li>
+<li>[ ] Add a mobile-friendly PWA wrapper.</li>
+<li>[ ] Add a public read-only "request status" page for requesters.</li>
+<li>[ ] Translate the user interface into Tamil for bilingual use.</li>
+</ul>
+<hr>
+<h2>📄 License</h2>
+<p>This project is released under the MIT License unless the <code>LICENSE</code> file in the repository specifies otherwise.</p>
+<hr>
+<div align="center">
+
+**🔧 Request it. Approve it. Assign it. Close it. Report on it. 🔧**
+
+<sub>Project by [@nicksananton0923-create](https://github.com/nicksananton0923-create) · Electrical Technology · Renewable Energy · Automation</sub>
+
+</div></div></section><section class="readme-section"><div class="section-banner"><span class="section-tag">REPO · Arduino-smart-fire-detection-suppression</span><a class="section-url" href="https://github.com/nicksananton0923-create/Arduino-smart-fire-detection-suppression">https://github.com/nicksananton0923-create/Arduino-smart-fire-detection-suppression</a></div><div class="markdown-body"><!-- ================================================================== -->
+<!-- Arduino-smart-fire-detection-suppression · README.md                 -->
+<!-- Arduino-based smart fire detection + conceptual suppression prototype -->
+<!-- ================================================================== -->
+
+<div align="center">
+
+# 🔥 Smart Fire Detection &amp; Suppression System
+
+**Arduino-based smart fire detection prototype with conceptual automatic suppression**
+
+<p>
+  <a href="https://github.com/nicksananton0923-create/Arduino-smart-fire-detection-suppression/stargazers"><img src="https://img.shields.io/github/stars/nicksananton0923-create/Arduino-smart-fire-detection-suppression?style=flat-square&color=F5B800" alt="Stars"/></a>
+  <a href="https://github.com/nicksananton0923-create/Arduino-smart-fire-detection-suppression/network/members"><img src="https://img.shields.io/github/forks/nicksananton0923-create/Arduino-smart-fire-detection-suppression?style=flat-square&color=0A4D8C" alt="Forks"/></a>
+  <img src="https://img.shields.io/github/last-commit/nicksananton0923-create/Arduino-smart-fire-detection-suppression?style=flat-square&color=F5B800" alt="Last commit"/>
+  <img src="https://img.shields.io/badge/Platform-Arduino-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Arduino"/>
+  <img src="https://img.shields.io/badge/Focus-Fire%20Safety-DC2626?style=flat-square" alt="Fire safety"/>
+  <img src="https://img.shields.io/badge/Status-Educational%20Prototype-F5B800?style=flat-square" alt="Status"/>
+</p>
+
+</div>
+
+<hr>
+<h2>📋 Table of Contents</h2>
+<ul>
+<li><a href="#-overview">Overview</a></li>
+<li><a href="#-background">Background</a></li>
+<li><a href="#-key-features">Key Features</a></li>
+<li><a href="#-hardware-components">Hardware Components</a></li>
+<li><a href="#-system-architecture">System Architecture</a></li>
+<li><a href="#-repository-structure">Repository Structure</a></li>
+<li><a href="#-getting-started">Getting Started</a></li>
+<li><a href="#-usage">Usage</a></li>
+<li><a href="#-safety--disclaimer">Safety &amp; Disclaimer</a></li>
+<li><a href="#-roadmap">Roadmap</a></li>
+<li><a href="#-license">License</a></li>
+</ul>
+<hr>
+<h2>📝 Overview</h2>
+<p>The <strong>Smart Fire Detection &amp; Suppression System</strong> is an Arduino-based prototype designed to demonstrate how embedded electronics can be used to detect the early signs of a fire and trigger an automated safety response. The project combines multiple flame and smoke sensors with control logic that decides when to raise an alarm and when — conceptually — to activate a suppression mechanism such as a water spray, a CO₂ release, or an extinguisher trigger. The system is built as an <strong>educational demonstration</strong> of fire sensing, emergency alerting, and automated safety control; it is not a commercial fire suppression product.</p>
+<p>The repository documents the prototype end-to-end: the sensor choices and their limitations, the control logic that fuses multiple sensor inputs to reduce false alarms, the alarm path (visual + audible + remote alert), and the conceptual suppression path that explains how the same logic would interface with a relay-actuated extinguisher in a real deployment. The threshold logic is intentionally separated from the actuation logic so that the same firmware can be reused with different sensor combinations or different suppression endpoints without rewriting the decision core.</p>
+<p>For students and educators, the project provides a clean, well-documented example of how to design a safety-critical embedded system the right way: every assumption is written down, every threshold is configurable, and every limitation is explicitly called out so that the reader can make an informed decision about adapting the work to their own context.</p>
+<hr>
+<h2>🔭 Background</h2>
+<p>Fire is one of the most time-critical hazards in any industrial or domestic environment. The difference between a near-miss and a serious incident often comes down to seconds — how quickly the fire is detected, how reliably the alarm is raised, and whether the suppression response starts before the fire has had time to spread. Traditional smoke detectors are excellent for homes but limited in industrial environments where dust, fumes, or heat variations can trigger false alarms. A multi-sensor approach that combines flame detection, smoke detection, and temperature sensing produces a more reliable decision than any single sensor on its own.</p>
+<p>This project was built to demonstrate that multi-sensor approach in a way that is reproducible by an electrical technology student. The prototype uses a flame sensor for direct flame detection, a smoke / gas sensor for early combustion products, and a temperature sensor for ambient heat rise. The firmware fuses these three signals using a simple voting system — at least two of the three sensors must agree that a fire condition exists before the alarm escalates — which dramatically reduces false positives from a single noisy sensor while still responding quickly to a real fire event.</p>
+<hr>
+<h2>✨ Key Features</h2>
+<ul>
+<li><strong>Multi-sensor fire detection</strong> — combines a flame sensor (IR-based), an MQ smoke / gas sensor, and a temperature / humidity sensor. Each sensor contributes one vote to the decision core, so a single noisy reading does not trigger a false alarm. This voting approach mirrors the redundancy used in professional fire detection panels.</li>
+<li><strong>Threshold-based decision core</strong> — every sensor has a configurable threshold defined at the top of the firmware. The decision logic compares each reading to its threshold, counts how many sensors are in alarm state, and escalates only when the configured minimum number of sensors agree (default: 2 of 3). This makes the system robust against false positives from a single sensor.</li>
+<li><strong>Three-stage alarm</strong> — when a fire condition is detected, the system raises a visual alarm (red LED + status indicator), an audible alarm (piezo buzzer), and a remote alert output (relay or digital output) that can be wired to a wider alarm system. The remote output is what would interface with a suppression actuator in a real deployment.</li>
+<li><strong>Conceptual suppression path</strong> — the firmware includes a commented-out suppression module that demonstrates how a relay-actuated extinguisher or water spray would be triggered after a configurable delay. The module is intentionally left inactive in the educational build so that no high-current actuator is energized during classroom demonstrations.</li>
+<li><strong>State-machine firmware structure</strong> — the main loop is structured as a small explicit state machine (<code>IDLE → DETECT → ALARM → (optional) SUPPRESS → COOLDOWN → IDLE</code>) rather than a tangled <code>if/else</code> chain. This makes the control flow easy to read in a classroom setting and easy to extend with new states.</li>
+<li><strong>Full documentation</strong> — every sensor, every threshold, and every assumption is written down. The documentation explicitly states what has been tested versus what remains conceptual so that anyone adapting the project knows exactly where the boundaries of the prototype are.</li>
+</ul>
+<hr>
+<h2>🔌 Hardware Components</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Component</th>
+<th>Role</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Controller</td>
+<td>Arduino UNO or Nano</td>
+<td>Main MCU</td>
+<td>Either works; UNO is easier for classroom demos</td>
+</tr>
+<tr>
+<td>Flame sensor</td>
+<td>KY-026 flame sensor (IR)</td>
+<td>Direct flame detection</td>
+<td>Digital + analog output</td>
+</tr>
+<tr>
+<td>Smoke sensor</td>
+<td>MQ-2 smoke / gas sensor</td>
+<td>Combustion gas detection</td>
+<td>Analog output, requires warm-up</td>
+</tr>
+<tr>
+<td>Climate sensor</td>
+<td>DHT22 or LM35</td>
+<td>Temperature rise detection</td>
+<td>DHT22 also adds humidity</td>
+</tr>
+<tr>
+<td>Alert — visual</td>
+<td>Red LED + green LED</td>
+<td>Status</td>
+<td>Green = OK, Red = alarm</td>
+</tr>
+<tr>
+<td>Alert — audible</td>
+<td>Piezo buzzer</td>
+<td>Audible alarm</td>
+<td>Active or passive</td>
+</tr>
+<tr>
+<td>Remote alert</td>
+<td>Relay module (5 V)</td>
+<td>Dry contact for external alarm / extinguisher</td>
+<td><strong>De-energized by default</strong></td>
+</tr>
+<tr>
+<td>Suppression (conceptual)</td>
+<td>Relay + solenoid valve / CO₂ trigger</td>
+<td>Water spray or gas release</td>
+<td><strong>Disabled in educational build</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The suppression path is intentionally left as a commented-out module. Do <strong>not</strong> connect any high-current or hazardous actuator without supervision and a proper enclosure.</p>
+</blockquote>
+<hr>
+<h2>🧱 System Architecture</h2>
+<pre><code>   ┌───────────────┐   ┌───────────────┐   ┌───────────────┐
+   │  Flame sensor │   │  Smoke sensor │   │  Temp sensor  │
+   └───────┬───────┘   └───────┬───────┘   └───────┬───────┘
+           │                   │                   │
+           ▼                   ▼                   ▼
+   ┌──────────────────────────────────────────────────────┐
+   │                   Decision Core                       │
+   │   Each sensor → compare to threshold → vote (0/1)     │
+   │   If votes ≥ MIN_VOTES (default 2) → escalate        │
+   └────────────────────┬─────────────────────────────────┘
+                        │
+        ┌───────────────┼───────────────┐
+        ▼               ▼               ▼
+   ┌─────────┐    ┌──────────┐    ┌──────────────┐
+   │  LED    │    │  Buzzer  │    │  Relay output │
+   │ (visual)│    │ (audible)│    │  (remote /    │
+   └─────────┘    └──────────┘    │   suppression)│
+                                  └──────────────┘
+</code></pre>
+<p>The decision core implements a simple two-of-three voting rule. A fire event is only declared when at least two sensors report a threshold breach within the same polling window. This reduces false positives from a single noisy sensor (e.g. smoke from cooking triggering the MQ-2 alone) while still catching a real fire event that affects multiple sensors simultaneously.</p>
+<hr>
+<h2>📂 Repository Structure</h2>
+<pre><code>Arduino-smart-fire-detection-suppression/
+├── README.md                  # This file
+├── /firmware
+│   ├── fire_detection.ino     # Main sketch
+│   └── /modules
+│       ├── sensors.cpp        # Sensor reader functions
+│       ├── decision.cpp       # Voting / threshold logic
+│       ├── alarm.cpp          # LED + buzzer control
+│       └── suppression.cpp   # Conceptual actuator path (disabled)
+├── /docs
+│   ├── wiring-guide.md
+│   ├── sensor-placement.md
+│   └── suppression-safety.md  # Why suppression is disabled by default
+├── /data
+│   └── sample-test-runs.csv   # Sample test scenarios + outcomes
+└── LICENSE
+</code></pre>
+<hr>
+<h2>🚀 Getting Started</h2>
+<h3>Prerequisites</h3>
+<ul>
+<li>Arduino IDE 1.8.13 or newer</li>
+<li>Arduino UNO or Nano board</li>
+<li>USB cable</li>
+<li>Sensors listed in <em>Hardware Components</em></li>
+</ul>
+<h3>Installation</h3>
+<ol>
+<li>
+<p><strong>Clone the repository</strong><br>
+<code>bash
+   git clone https://github.com/nicksananton0923-create/Arduino-smart-fire-detection-suppression.git
+   cd Arduino-smart-fire-detection-suppression</code></p>
+</li>
+<li>
+<p><strong>Open the firmware</strong><br>
+   - Open <code>firmware/fire_detection.ino</code> in the Arduino IDE.<br>
+   - Select the correct board and port from the <em>Tools</em> menu.</p>
+</li>
+<li>
+<p><strong>Install required libraries</strong><br>
+   - Use <em>Sketch → Include Library → Manage Libraries</em> and install any libraries referenced in the firmware.</p>
+</li>
+<li>
+<p><strong>Wire the sensors</strong> following <code>docs/wiring-guide.md</code>.</p>
+</li>
+<li>
+<p><strong>Upload the firmware</strong> and open the Serial Monitor at the baud rate declared at the top of the sketch.</p>
+</li>
+</ol>
+<hr>
+<h2>🎯 Usage</h2>
+<h3>Educational demonstration mode (default)</h3>
+<p>In the default build, the suppression module is <strong>disabled</strong>. When a fire condition is detected:</p>
+<ol>
+<li>The red LED lights up and the green LED turns off.</li>
+<li>The piezo buzzer pulses.</li>
+<li>The relay output energizes — wire this to a small external lamp or visible indicator for the demo.</li>
+<li>A status message is written to the Serial Monitor explaining which sensors triggered the alarm.</li>
+</ol>
+<h3>Configurable thresholds</h3>
+<p>Edit the configuration block at the top of <code>fire_detection.ino</code>:</p>
+<pre><code class="language-cpp">// === Sensor thresholds ===
+const int  FLAME_THRESHOLD     = 600;   // Analog reading (sensor-specific)
+const int  SMOKE_THRESHOLD     = 400;   // Analog reading (ppm estimate)
+const float TEMP_THRESHOLD     = 50.0;  // °C
+
+// === Decision core ===
+const int  MIN_VOTES_TO_ALARM  = 2;     // out of 3 sensors
+const unsigned long ALARM_HOLD_MS = 5000; // hold alarm after sensors clear
+
+// === Suppression (DISABLED by default) ===
+const bool SUPPRESSION_ENABLED = false; // set true ONLY in supervised deployment
+</code></pre>
+<h3>Test scenarios</h3>
+<p>Use a lighter, a candle, or a heat gun at a safe distance to trigger each sensor individually and verify the voting logic. See <code>docs/sensor-placement.md</code> for safe distances and recommended test scenarios.</p>
+<hr>
+<h2>⚠️ Safety &amp; Disclaimer</h2>
+<ul>
+<li><strong>Educational prototype only.</strong> This system is <strong>not</strong> a certified fire detection or suppression product and must not be used as the sole means of fire protection in any environment.</li>
+<li><strong>Suppression is disabled by default.</strong> Enabling the suppression path energizes a relay that can switch high-current or hazardous loads. Only enable it in a supervised deployment with a proper enclosure, fusing, and risk assessment.</li>
+<li><strong>Sensor limitations.</strong> Hobby-grade flame and smoke sensors have known false-positive and false-negative patterns. Do not use the prototype as a substitute for certified smoke detectors in residential or commercial premises.</li>
+<li><strong>Test safely.</strong> Always test the sensors in a controlled environment with a fire extinguisher on hand. Never test the suppression path with a real hazard.</li>
+<li><strong>Compliance.</strong> Any real deployment must follow local fire safety regulations and use certified components. This project does not constitute engineering advice.</li>
+</ul>
+<hr>
+<h2>🗺 Roadmap</h2>
+<ul>
+<li>[ ] Add a small OLED display for local status readout.</li>
+<li>[ ] Add an ESP32 variant with Wi-Fi alerting (SMS / Telegram / email).</li>
+<li>[ ] Add a log-to-SD-card module for post-event analysis.</li>
+<li>[ ] Add a calibration helper sketch to baseline each sensor.</li>
+<li>[ ] Add a documented, supervised suppression test plan.</li>
+</ul>
+<hr>
+<h2>📄 License</h2>
+<p>This project is released under the MIT License unless a separate <code>LICENSE</code> file in the repository specifies otherwise.</p>
+<hr>
+<div align="center">
+
+**🔥 Detect early. Alert reliably. Suppress safely. 🔥**
+
+<sub>Project by [@nicksananton0923-create](https://github.com/nicksananton0923-create) · Electrical Technology · Renewable Energy · Automation</sub>
+
+</div></div></section><section class="readme-section"><div class="section-banner"><span class="section-tag">REPO · Arduino-tomato-colour-sorting</span><a class="section-url" href="https://github.com/nicksananton0923-create/Arduino-tomato-colour-sorting">https://github.com/nicksananton0923-create/Arduino-tomato-colour-sorting</a></div><div class="markdown-body"><!-- ================================================================== -->
+<!-- Arduino-tomato-colour-sorting · README.md                             -->
+<!-- Arduino-based conveyor tomato ripeness sorter                          -->
+<!-- ================================================================== -->
+
+<div align="center">
+
+# 🍅 Tomato Colour Sorting Conveyor
+
+**Arduino-based smart conveyor belt for tomato ripeness detection and automatic sorting**
+
+<p>
+  <a href="https://github.com/nicksananton0923-create/Arduino-tomato-colour-sorting/stargazers"><img src="https://img.shields.io/github/stars/nicksananton0923-create/Arduino-tomato-colour-sorting?style=flat-square&color=F5B800" alt="Stars"/></a>
+  <a href="https://github.com/nicksananton0923-create/Arduino-tomato-colour-sorting/network/members"><img src="https://img.shields.io/github/forks/nicksananton0923-create/Arduino-tomato-colour-sorting?style=flat-square&color=0A4D8C" alt="Forks"/></a>
+  <img src="https://img.shields.io/github/last-commit/nicksananton0923-create/Arduino-tomato-colour-sorting?style=flat-square&color=F5B800" alt="Last commit"/>
+  <img src="https://img.shields.io/badge/Platform-Arduino-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Arduino"/>
+  <img src="https://img.shields.io/badge/Focus-Automation-0A4D8C?style=flat-square" alt="Automation"/>
+  <img src="https://img.shields.io/badge/Status-Educational%20Prototype-F5B800?style=flat-square" alt="Status"/>
+</p>
+
+</div>
+
+<hr>
+<h2>📋 Table of Contents</h2>
+<ul>
+<li><a href="#-overview">Overview</a></li>
+<li><a href="#-background">Background</a></li>
+<li><a href="#-key-features">Key Features</a></li>
+<li><a href="#-hardware-components">Hardware Components</a></li>
+<li><a href="#-system-architecture">System Architecture</a></li>
+<li><a href="#-repository-structure">Repository Structure</a></li>
+<li><a href="#-getting-started">Getting Started</a></li>
+<li><a href="#-usage">Usage</a></li>
+<li><a href="#-calibration--tuning">Calibration &amp; Tuning</a></li>
+<li><a href="#-safety--limitations">Safety &amp; Limitations</a></li>
+<li><a href="#-roadmap">Roadmap</a></li>
+<li><a href="#-license">License</a></li>
+</ul>
+<hr>
+<h2>📝 Overview</h2>
+<p>The <strong>Tomato Colour Sorting Conveyor</strong> is an Arduino-based automation project that detects the ripeness of a tomato using a colour sensor, classifies it into one of three categories — <strong>green</strong>, <strong>partially ripe</strong>, or <strong>red</strong> — and uses a servo-driven diverter to push each tomato into the correct bin as it travels along a small conveyor belt. The project demonstrates how affordable embedded hardware can be assembled into a complete sensing-and-actuation pipeline suitable for small-scale agricultural grading, classroom demonstrations of industrial automation, and proof-of-concept workflows for produce handling.</p>
+<p>The repository documents the full build, including the colour sensor selection and calibration approach, the conveyor mechanism, the servo-actuated sorting gate, and the firmware that ties everything together. The classification logic is intentionally simple and explainable: the firmware reads red / green / blue component values from the colour sensor, computes a single ripeness score, and classifies against two configurable thresholds. This keeps the logic transparent so a reader can audit it end-to-end, while still being flexible enough that the same firmware can be retuned for other produce (oranges, bananas, capsicum) by changing the calibration constants.</p>
+<p>The project is built as an educational prototype and is <strong>not</strong> intended for production-scale commercial packing. It is suitable for student lab work, science fairs, and concept demonstrations in agricultural automation courses. As with the other repositories on this account, every assumption and every limitation is written down so that the next reader can adapt the work safely and confidently.</p>
+<hr>
+<h2>🔭 Background</h2>
+<p>Manual sorting of produce by ripeness is slow, inconsistent, and labor-intensive. In a small-scale operation — a farm gate, a cooperative packing shed, or a teaching kitchen — there is rarely a budget for an industrial vision system, but there is a real need for a low-cost, repeatable way to separate ripe from unripe produce so that each batch goes to the right destination (immediate sale, ripening storage, or processing). Colour is one of the simplest and most reliable signals for tomato ripeness, which makes a colour-sensor-based sorter an ideal first automation project for an agricultural technology course.</p>
+<p>The build sits at a useful intersection of three learning areas: <strong>embedded sensing</strong> (calibrating a colour sensor against real-world produce), <strong>mechanical actuation</strong> (timing a servo gate so the right tomato lands in the right bin), and <strong>control logic</strong> (deciding when to read the sensor, when to actuate the gate, and how to handle the belt's continuous motion). Each of those three layers is documented separately in this repository so the project can be used as a teaching tool for any one of those topics in isolation, not only as a complete system.</p>
+<hr>
+<h2>✨ Key Features</h2>
+<ul>
+<li><strong>RGB colour sensing</strong> — uses a TCS3200 (or compatible) colour sensor to read the red, green, and blue components of each tomato as it passes the sensor station. The firmware averages a small number of readings to reduce noise from a single sample.</li>
+<li><strong>Three-class ripeness classification</strong> — each reading is reduced to a single ripeness score and classified against two configurable thresholds into <em>green</em>, <em>partially ripe</em>, or <em>red</em>. The thresholds live in a configuration block at the top of the firmware so they can be retuned without touching the classification logic.</li>
+<li><strong>Servo-driven sorting gate</strong> — a single servo rotates a diverter gate to one of three positions corresponding to the three ripeness bins. The firmware controls the gate timing relative to the conveyor speed so the right tomato lands in the right bin even when the belt is moving.</li>
+<li><strong>Belt speed awareness</strong> — the firmware uses a configurable belt-speed parameter (and optionally an IR slot sensor) to time the delay between the colour reading and the servo actuation, so the sorting decision is applied to the correct tomato rather than the one immediately after it.</li>
+<li><strong>Serial diagnostics</strong> — every reading, classification decision, and servo movement is written to the serial monitor in a simple human-readable format, so the system can be tuned and debugged without any external tooling.</li>
+<li><strong>Modular firmware structure</strong> — the codebase is split into clearly named modules (colour reader, classifier, servo driver, conveyor timing) rather than a single monolithic sketch, so each layer can be tested and replaced independently.</li>
+</ul>
+<hr>
+<h2>🔌 Hardware Components</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Component</th>
+<th>Role</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Controller</td>
+<td>Arduino UNO or Nano</td>
+<td>Main MCU</td>
+<td>UNO preferred for classroom builds</td>
+</tr>
+<tr>
+<td>Colour sensor</td>
+<td>TCS3200 (or TCS230)</td>
+<td>RGB colour reading</td>
+<td>Frequency output; needs LED illumination</td>
+</tr>
+<tr>
+<td>Conveyor</td>
+<td>Small DC motor + belt</td>
+<td>Moves tomatoes past sensor</td>
+<td>Speed controlled via PWM or fixed supply</td>
+</tr>
+<tr>
+<td>Actuator</td>
+<td>Standard servo (SG90 or MG90)</td>
+<td>Drives sorting gate</td>
+<td>3-position rotation</td>
+</tr>
+<tr>
+<td>Optional</td>
+<td>IR slot sensor or photo-interrupter</td>
+<td>Tomato position detection</td>
+<td>Improves sorting accuracy</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>5 V / 2 A supply</td>
+<td>System power</td>
+<td>Servo needs separate supply from Arduino</td>
+</tr>
+<tr>
+<td>Frame</td>
+<td>Laser-cut or 3D-printed chassis</td>
+<td>Holds sensor, gate, bins</td>
+<td>Documented in <code>/mechanical</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>🧱 System Architecture</h2>
+<pre><code>   ┌──────────────────────────────────────────────────────────────┐
+   │                    Conveyor belt (continuous)                  │
+   │   Tomato in  ──►  [Sensor station]  ──►  [Servo gate] ──► Bins │
+   └──────────────────────────────────────────────────────────────┘
+                              │                      │
+                              ▼                      ▼
+                    ┌─────────────────┐    ┌──────────────────┐
+                    │  TCS3200 colour  │    │  Servo diverter   │
+                    │  sensor (RGB)    │    │  (3-position gate)│
+                    └────────┬────────┘    └────────▲───────────┘
+                             │                      │
+                             ▼                      │
+                    ┌────────────────────────────────────────┐
+                    │            Arduino (firmware)            │
+                    │  read RGB → score → classify → time gate  │
+                    └────────────────────────────────────────┘
+</code></pre>
+<p>The sensing and actuation happen at two different physical positions on the belt, so the firmware uses a configurable delay (or a position sensor) to apply the sorting decision to the tomato that was actually measured, not the one currently under the gate. This is the part of the project that makes it a real industrial-style control problem rather than a simple "read sensor, move servo" demo.</p>
+<hr>
+<h2>📂 Repository Structure</h2>
+<pre><code>Arduino-tomato-colour-sorting/
+├── README.md                  # This file
+├── /firmware
+│   ├── tomato_sorter.ino      # Main sketch
+│   └── /modules
+│       ├── colour_reader.cpp  # TCS3200 driver
+│       ├── classifier.cpp     # Ripeness scoring + thresholds
+│       ├── servo_driver.cpp   # Gate control
+│       └── conveyor_timing.cpp# Belt-speed delay logic
+├── /mechanical
+│   ├── chassis-overview.md    # Frame design notes
+│   └── gate-mechanism.md      # Servo + diverter design
+├── /docs
+│   ├── calibration-guide.md   # How to baseline the colour sensor
+│   └── tuning-guide.md        # Threshold + timing tuning
+├── /data
+│   └── sample-runs.csv         # Sample readings + classifications
+└── LICENSE
+</code></pre>
+<hr>
+<h2>🚀 Getting Started</h2>
+<h3>Prerequisites</h3>
+<ul>
+<li>Arduino IDE 1.8.13 or newer</li>
+<li>Arduino UNO or Nano</li>
+<li>TCS3200 colour sensor, servo, small DC motor or pre-built conveyor</li>
+<li>Separate 5 V supply for the servo (do not power the servo from the Arduino's 5 V pin)</li>
+</ul>
+<h3>Installation</h3>
+<ol>
+<li>
+<p><strong>Clone the repository</strong><br>
+<code>bash
+   git clone https://github.com/nicksananton0923-create/Arduino-tomato-colour-sorting.git
+   cd Arduino-tomato-colour-sorting</code></p>
+</li>
+<li>
+<p><strong>Open <code>firmware/tomato_sorter.ino</code></strong> in the Arduino IDE and select the correct board and port.</p>
+</li>
+<li>
+<p><strong>Install required libraries</strong> (e.g. <code>Servo.h</code> is bundled with the IDE; any colour-sensor library is referenced in the firmware).</p>
+</li>
+<li>
+<p><strong>Wire the components</strong> following the wiring guide in <code>docs/calibration-guide.md</code>.</p>
+</li>
+<li>
+<p><strong>Power the servo from a separate 5 V supply</strong> — sharing the Arduino's 5 V rail can cause brownout resets when the servo moves.</p>
+</li>
+<li>
+<p><strong>Upload the firmware</strong> and open the Serial Monitor.</p>
+</li>
+</ol>
+<hr>
+<h2>🎯 Usage</h2>
+<ol>
+<li><strong>Calibrate the colour sensor</strong> against real tomato samples of each ripeness class. Use the helper sketch in <code>firmware/modules/colour_reader.cpp</code> to print raw RGB values for each sample.</li>
+<li><strong>Set the thresholds</strong> in the configuration block at the top of <code>tomato_sorter.ino</code>:</li>
+</ol>
+<p>```cpp<br>
+   // === Ripeness classification ===<br>
+   const int RIPENESS_GREEN_MAX     = 300;  // score &lt; 300 → green<br>
+   const int RIPENESS_PARTIAL_MAX   = 600;  // 300 ≤ score &lt; 600 → partially ripe<br>
+   // score ≥ 600 → red</p>
+<p>// === Conveyor timing ===<br>
+   const unsigned long SENSOR_TO_GATE_MS = 1200; // delay between reading and actuation<br>
+   const int SERVO_POS_GREEN     = 30;<br>
+   const int SERVO_POS_PARTIAL   = 90;<br>
+   const int SERVO_POS_RED       = 150;<br>
+   ```</p>
+<ol start="3">
+<li><strong>Run the conveyor</strong> at a fixed speed. Place a tomato at the input end.</li>
+<li>The firmware will read the colour, classify, and actuate the servo gate after the configured delay.</li>
+<li>Watch the Serial Monitor for live readouts of <code>R, G, B, score, class, servo_pos</code>.</li>
+</ol>
+<hr>
+<h2>🎨 Calibration &amp; Tuning</h2>
+<ul>
+<li><strong>Ambient light matters.</strong> The TCS3200 is sensitive to ambient light. Shield the sensor station with a small opaque hood and use the sensor's onboard LED for consistent illumination.</li>
+<li><strong>Sample several tomatoes per class.</strong> Single-sample calibration is unreliable. Take 5–10 readings per ripeness class and use the average.</li>
+<li><strong>Servo timing depends on belt speed.</strong> If you change the conveyor motor speed, recalibrate <code>SENSOR_TO_GATE_MS</code> empirically by running a known tomato through the system and observing which bin it lands in.</li>
+<li><strong>Mechanical alignment.</strong> The diverter gate must reach its target position before the tomato arrives. If the gate is still moving when the tomato arrives, the tomato will be deflected incorrectly.</li>
+</ul>
+<hr>
+<h2>⚠️ Safety &amp; Limitations</h2>
+<ul>
+<li><strong>Mechanical safety.</strong> Moving belts and servo-driven gates can pinch fingers. Use a transparent cover over the gate mechanism during demonstrations.</li>
+<li><strong>Power supply.</strong> A servo under load can draw bursts of current that crash the Arduino. Always use a separate 5 V supply for the servo and tie the grounds together.</li>
+<li><strong>Sensor limits.</strong> The colour sensor cannot see through packaging, dirt, or uneven tomato surfaces. Sort washed, unpacked tomatoes for best results.</li>
+<li><strong>Not for production.</strong> This is an educational prototype. Production-scale sorters use machine vision, multi-sensor fusion, and food-grade materials. This project does not replace them.</li>
+</ul>
+<hr>
+<h2>🗺 Roadmap</h2>
+<ul>
+<li>[ ] Add an OLED display showing the last reading + classification.</li>
+<li>[ ] Add an IR position sensor for tighter sensor-to-gate timing.</li>
+<li>[ ] Add a counter that records how many tomatoes went into each bin per session.</li>
+<li>[ ] Add an ESP32 variant with Wi-Fi dashboard for remote session monitoring.</li>
+<li>[ ] Add a calibration helper sketch that auto-suggests thresholds from a learning set.</li>
+</ul>
+<hr>
+<h2>📄 License</h2>
+<p>This project is released under the MIT License unless a separate <code>LICENSE</code> file in the repository specifies otherwise.</p>
+<hr>
+<div align="center">
+
+**🍅 Sense → Score → Sort. Reproducible agricultural automation. 🍅**
+
+<sub>Project by [@nicksananton0923-create](https://github.com/nicksananton0923-create) · Electrical Technology · Renewable Energy · Automation</sub>
+
+</div></div></section><section class="readme-section"><div class="section-banner"><span class="section-tag">REPO · Industrial-water-consumption-monitoring</span><a class="section-url" href="https://github.com/nicksananton0923-create/Industrial-water-consumption-monitoring">https://github.com/nicksananton0923-create/Industrial-water-consumption-monitoring</a></div><div class="markdown-body"><!-- ================================================================== -->
+<!-- Industrial-water-consumption-monitoring · README.md                    -->
+<!-- Industrial water meter reading, analysis & dashboarding               -->
+<!-- ================================================================== -->
+
+<div align="center">
+
+# 💧 Industrial Water Consumption Monitoring
+
+**Reusable system for recording, validating, analyzing &amp; visualizing industrial water consumption**
+
+<p>
+  <a href="https://github.com/nicksananton0923-create/Industrial-water-consumption-monitoring/stargazers"><img src="https://img.shields.io/github/stars/nicksananton0923-create/Industrial-water-consumption-monitoring?style=flat-square&color=F5B800" alt="Stars"/></a>
+  <a href="https://github.com/nicksananton0923-create/Industrial-water-consumption-monitoring/network/members"><img src="https://img.shields.io/github/forks/nicksananton0923-create/Industrial-water-consumption-monitoring?style=flat-square&color=0A4D8C" alt="Forks"/></a>
+  <img src="https://img.shields.io/github/last-commit/nicksananton0923-create/Industrial-water-consumption-monitoring?style=flat-square&color=F5B800" alt="Last commit"/>
+  <img src="https://img.shields.io/badge/Tool-Excel%20%2F%20Power%20BI-217346?style=flat-square&logo=microsoftexcel&logoColor=white" alt="Excel"/>
+  <img src="https://img.shields.io/badge/Focus-Data%20Analysis-0A4D8C?style=flat-square" alt="Analysis"/>
+  <img src="https://img.shields.io/badge/Status-In%20Progress-F5B800?style=flat-square" alt="Status"/>
+</p>
+
+</div>
+
+<hr>
+<h2>📋 Table of Contents</h2>
+<ul>
+<li><a href="#-overview">Overview</a></li>
+<li><a href="#-background">Background</a></li>
+<li><a href="#-key-features">Key Features</a></li>
+<li><a href="#-repository-structure">Repository Structure</a></li>
+<li><a href="#-data-model">Data Model</a></li>
+<li><a href="#-calculation-methodology">Calculation Methodology</a></li>
+<li><a href="#-validation-rules">Validation Rules</a></li>
+<li><a href="#-dashboard-plan">Dashboard Plan</a></li>
+<li><a href="#-getting-started">Getting Started</a></li>
+<li><a href="#-usage">Usage</a></li>
+<li><a href="#-data-privacy--confidentiality">Data Privacy &amp; Confidentiality</a></li>
+<li><a href="#-roadmap">Roadmap</a></li>
+<li><a href="#-license">License</a></li>
+</ul>
+<hr>
+<h2>📝 Overview</h2>
+<p>The <strong>Industrial Water Consumption Monitoring</strong> project is a reusable, vendor-neutral system for recording water meter readings, calculating consumption between successive readings, validating the data for errors, and visualizing trends and anomalies in a dashboard that can be built in Excel or Power BI. The project is designed for industrial and commercial facilities that need a structured way to track water usage across multiple meters and locations without investing in a commercial metering platform. The output is intended for facility managers, sustainability officers, and operations teams who need to understand where water is being used, where usage is unusual, and where opportunities for reduction exist.</p>
+<p>The repository is currently in a structured planning phase: the data model, calculation methodology, validation rules, and dashboard plan are all documented, and the supporting templates are being built incrementally. Every design decision is written down before the corresponding file is created, so readers can see not only <em>what</em> the system does but <em>why</em> each choice was made. This makes the project a useful reference for anyone learning how to design a small data system the right way — start with the schema, then the calculation rules, then the validation rules, then the visualization, and only then the dashboard.</p>
+<p>The system is intentionally tool-light. Excel and Power BI are evaluated first because they are the most accessible tools for facility teams. Python is recommended only where it adds useful data validation or automation that the spreadsheet cannot do natively. This keeps the barrier to entry low while still leaving room for advanced analysis later.</p>
+<hr>
+<h2>🔭 Background</h2>
+<p>Water is one of the most under-managed utilities in industrial facilities. Unlike electricity, which is usually metered at the main incomer and monitored through a utility bill, water is often consumed at many points across a site with only the main meter being read regularly. Sub-meters are frequently installed but rarely read consistently; when they are read, the data is often stored in ad-hoc spreadsheets with no validation, no consistent units, and no clear audit trail. The result is that facility managers usually cannot answer basic questions such as "which area consumed the most water last month?", "is the consumption trend in area X increasing?", or "did the meter in area Y register an anomalous jump that we should investigate?"</p>
+<p>This project was built to close that gap in a way that any facility team can adopt without buying new software. It defines a clear data model for water meter records, a calculation methodology that handles cumulative meters correctly (including resets, replacements, and roll-overs), a validation rule set that catches the most common data-entry errors, and a dashboard plan that turns the cleaned data into actionable visualizations. The repository deliberately does not invent consumption readings or claim verified water savings — every number in the project's sample data is clearly labeled as anonymized and synthetic.</p>
+<hr>
+<h2>✨ Key Features</h2>
+<ul>
+<li><strong>Meter register template</strong> — captures the identity of every meter (meter ID, location, area, equipment, unit, install date, serial number) so that consumption records can be joined to a physical asset. This is the backbone of the system: without a clean meter register, none of the downstream analysis is trustworthy.</li>
+<li><strong>Consumption log template</strong> — captures each meter reading with date, time, cumulative reading, units, and a free-text notes column. The schema supports both manual readings and automated logger exports.</li>
+<li><strong>Cumulative-to-consumption calculation</strong> — for cumulative meters, the system computes consumption as the current valid reading minus the previous valid reading for the same meter. The methodology explicitly handles meter resets, replacements, roll-overs, missing readings, and unit changes — all common edge cases that naive spreadsheet calculations get wrong.</li>
+<li><strong>Validation rule set</strong> — flags missing readings, duplicate readings for the same meter on the same date, negative consumption, implausibly large jumps (anomalies), and inconsistent units. Anomalies are flagged as <strong>potential</strong> issues for investigation, never as confirmed leaks.</li>
+<li><strong>Daily / weekly / monthly summaries</strong> — the system produces time-bucketed summaries that support comparison across meters, areas, and time periods. These summaries are the input to the dashboard.</li>
+<li><strong>Trend charts and KPIs</strong> — the dashboard plan defines a small set of useful visualizations (line charts of consumption over time, bar charts of consumption by area, KPI tiles for total consumption, top consumer, biggest change vs. previous period).</li>
+<li><strong>Anomaly flags</strong> — any reading that breaches a configurable threshold (e.g. consumption more than 3× the rolling average for that meter) is flagged for investigation. The flag is an invitation to investigate, not a confirmed conclusion.</li>
+<li><strong>Optional target-versus-actual comparisons</strong> — where an authorized target exists for a meter or area, the dashboard can compare actual consumption against the target and surface the variance.</li>
+</ul>
+<hr>
+<h2>📂 Repository Structure</h2>
+<pre><code>Industrial-water-consumption-monitoring/
+├── README.md                      # This file
+├── /templates
+│   ├── water-meter-register.csv   # Meter master list
+│   └── water-consumption-log.csv  # Reading log
+├── /data
+│   └── sample-water-readings.csv  # Anonymized synthetic dataset
+├── /docs
+│   ├── data-dictionary.md         # Every column, every unit
+│   ├── calculation-methodology.md # Cumulative meter calculations
+│   ├── data-validation.md         # Validation rule set
+│   └── dashboard-guide.md         # Excel / Power BI build instructions
+├── /dashboard
+│   ├── excel-dashboard.xlsx       # (planned)
+│   └── powerbi-template.pbit       # (planned)
+└── LICENSE
+</code></pre>
+<hr>
+<h2>🗃 Data Model</h2>
+<p>The system is built around two core tables:</p>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Granularity</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>water-meter-register</code></td>
+<td>One row per meter</td>
+<td>Identity + location of each meter</td>
+</tr>
+<tr>
+<td><code>water-consumption-log</code></td>
+<td>One row per reading</td>
+<td>Each individual meter reading event</td>
+</tr>
+</tbody>
+</table>
+<p>The two tables are joined on <code>meter_id</code>. The register is the source of truth for what each meter is and where it sits; the log is the source of truth for what each meter has read over time. Any analysis — daily totals, area comparisons, trend charts — starts by joining these two tables.</p>
+<hr>
+<h2>🧮 Calculation Methodology</h2>
+<p>For cumulative meters (the most common type), consumption between two successive readings of the same meter is:</p>
+<pre><code>consumption = current_reading − previous_reading
+</code></pre>
+<p>The following edge cases are explicitly handled:</p>
+<ul>
+<li><strong>Meter reset / replacement:</strong> if <code>current_reading &lt; previous_reading</code> and a reset / replacement is documented in the notes column, treat <code>current_reading</code> as a new baseline and skip the delta for that interval.</li>
+<li><strong>Meter roll-over:</strong> if <code>current_reading &lt; previous_reading</code> and the meter is documented to have rolled over at its maximum scale, add the maximum scale to the delta.</li>
+<li><strong>Missing readings:</strong> if a reading is missing for a date, no consumption is computed for that interval; the next valid reading computes the cumulative consumption across the gap.</li>
+<li><strong>Unit changes:</strong> if a meter's unit changes (e.g. from gallons to liters), the readings before and after the change cannot be directly compared. The system flags this and requires explicit reconciliation before computing consumption across the change point.</li>
+</ul>
+<p>Full details are in <code>docs/calculation-methodology.md</code>.</p>
+<hr>
+<h2>✅ Validation Rules</h2>
+<p>The validation rule set is intentionally simple and explainable:</p>
+<ol>
+<li><strong>No duplicate readings</strong> for the same meter on the same date and time.</li>
+<li><strong>No negative consumption</strong> unless a documented reset / replacement / roll-over has been recorded.</li>
+<li><strong>No missing mandatory fields</strong> — meter ID, date, reading, unit are all required.</li>
+<li><strong>No inconsistent units</strong> — the unit column must match the unit declared in the meter register for that meter.</li>
+<li><strong>Anomaly flag</strong> — consumption more than 3× the rolling 7-day average for that meter is flagged as a potential issue for investigation, not a confirmed leak.</li>
+<li><strong>Date sanity</strong> — reading dates must be within a reasonable window of the recording date (e.g. not in the future, not more than 1 year in the past).</li>
+</ol>
+<hr>
+<h2>📊 Dashboard Plan</h2>
+<p>The dashboard plan defines four standard views:</p>
+<table>
+<thead>
+<tr>
+<th>View</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total consumption trend</td>
+<td>Line chart</td>
+<td>Monthly total consumption across all meters</td>
+</tr>
+<tr>
+<td>Consumption by area</td>
+<td>Stacked bar chart</td>
+<td>Monthly consumption broken down by area</td>
+</tr>
+<tr>
+<td>Top consumers table</td>
+<td>Sorted table</td>
+<td>Top 10 meters by total consumption in the period</td>
+</tr>
+<tr>
+<td>Anomaly investigation list</td>
+<td>Filtered table</td>
+<td>All readings flagged as anomalies, ready for review</td>
+</tr>
+</tbody>
+</table>
+<p>The dashboard can be built in either Excel (using PivotTables + PivotCharts) or Power BI (using the standard table + chart visualizations). Build instructions are in <code>docs/dashboard-guide.md</code>.</p>
+<hr>
+<h2>🚀 Getting Started</h2>
+<ol>
+<li>
+<p><strong>Clone the repository</strong><br>
+<code>bash
+   git clone https://github.com/nicksananton0923-create/Industrial-water-consumption-monitoring.git
+   cd Industrial-water-consumption-monitoring</code></p>
+</li>
+<li>
+<p><strong>Read the design documents in order:</strong><br>
+   - <code>docs/data-dictionary.md</code> — understand the data model.<br>
+   - <code>docs/calculation-methodology.md</code> — understand how consumption is computed.<br>
+   - <code>docs/data-validation.md</code> — understand the validation rules.<br>
+   - <code>docs/dashboard-guide.md</code> — understand the dashboard plan.</p>
+</li>
+<li>
+<p><strong>Populate <code>templates/water-meter-register.csv</code></strong> with your facility's meters. Use the data dictionary for the exact column names and units.</p>
+</li>
+<li>
+<p><strong>Begin recording readings</strong> in <code>templates/water-consumption-log.csv</code>. One row per reading.</p>
+</li>
+<li>
+<p><strong>Build the dashboard</strong> in Excel or Power BI following <code>docs/dashboard-guide.md</code>.</p>
+</li>
+</ol>
+<hr>
+<h2>🎯 Usage</h2>
+<ul>
+<li><strong>Daily:</strong> technicians record new meter readings in the consumption log.</li>
+<li><strong>Weekly:</strong> a reviewer runs the validation rules across the consumption log and investigates any flagged anomalies.</li>
+<li><strong>Monthly:</strong> the dashboard is refreshed and shared with facility management. Consumption trends and anomalies are reviewed in a short monthly meeting.</li>
+<li><strong>Quarterly / annually:</strong> the meter register is reviewed for accuracy (meters that have been replaced, relocated, or decommissioned are updated).</li>
+</ul>
+<hr>
+<h2>🔒 Data Privacy &amp; Confidentiality</h2>
+<ul>
+<li><strong>Never commit real facility data to a public repository.</strong> Use the <code>sample-water-readings.csv</code> pattern as a guide for anonymizing your own data before sharing any version of this work publicly.</li>
+<li><strong>Synthetic data only in samples.</strong> All numbers in <code>data/sample-water-readings.csv</code> are clearly labeled as synthetic and anonymized.</li>
+<li><strong>No claims of verified savings.</strong> The system does not claim verified water savings without evidence. Anomalies are flagged as potential issues, not confirmed leaks.</li>
+</ul>
+<hr>
+<h2>🗺 Roadmap</h2>
+<ul>
+<li>[ ] Publish the water meter register + consumption log CSV templates.</li>
+<li>[ ] Publish the data dictionary.</li>
+<li>[ ] Publish the calculation methodology + a worked example.</li>
+<li>[ ] Publish the validation rule set with a Python helper script.</li>
+<li>[ ] Publish the Excel dashboard template.</li>
+<li>[ ] Publish the Power BI template.</li>
+<li>[ ] Translate key documentation into Tamil for bilingual use.</li>
+</ul>
+<hr>
+<h2>📄 License</h2>
+<p>This project is released under the MIT License unless the <code>LICENSE</code> file in the repository specifies otherwise.</p>
+<hr>
+<div align="center">
+
+**💧 Measure it. Validate it. Visualize it. Then act on it. 💧**
+
+<sub>Project by [@nicksananton0923-create](https://github.com/nicksananton0923-create) · Electrical Technology · Renewable Energy · Automation</sub>
+
+</div></div></section><section class="readme-section"><div class="section-banner"><span class="section-tag">SETUP GUIDE</span></div><div class="markdown-body"><h1>🚀 Setup Guide — Professional GitHub Profile</h1>
+<p>This guide walks you through turning the README files in this folder into a polished, professional GitHub presence. Follow it top to bottom; each step is short and produces visible results.</p>
+<blockquote>
+<p><strong>Folder contents</strong><br>
+- <code>README.md</code> → goes in the special <code>nicksananton0923-create/nicksananton0923-create</code> repo (your profile).<br>
+- <code>repos/&lt;name&gt;-README.md</code> → goes inside each matching repository, replacing the existing <code>README.md</code>.<br>
+- <code>PREVIEW.pdf</code> → for your review only; do not upload.</p>
+</blockquote>
+<hr>
+<h2>✅ Pre-flight Checklist</h2>
+<p>Before you start, make sure you have:</p>
+<ul>
+<li>[ ] A GitHub account logged in at https://github.com (the one named <strong>nicksananton0923-create</strong>).</li>
+<li>[ ] The README files from this folder downloaded to your computer.</li>
+<li>[ ] A simple text editor (VS Code, Notepad, or GitHub's built-in web editor — all work).</li>
+<li>[ ] Your real <strong>LinkedIn profile URL</strong>, <strong>email address</strong>, and (optional) <strong>portfolio URL</strong> ready.</li>
+</ul>
+<blockquote>
+<p>The README files contain a few placeholders like <code>[YOUR-LINKEDIN-URL]</code>, <code>[YOUR-EMAIL]</code>, and <code>[YOUR-PORTFOLIO-URL]</code>. You will replace these with your real info in <strong>Step 2</strong> before uploading.</p>
+</blockquote>
+<hr>
+<h2>📌 Step 1 — Fill In Your Personal Placeholders</h2>
+<p>Open <strong>every</strong> <code>.md</code> file in this folder and replace the placeholders with your real information. Do this <em>before</em> uploading so you only do it once.</p>
+<h3>Placeholders to replace</h3>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Replace with</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[YOUR-LINKEDIN-URL]</code></td>
+<td>Your LinkedIn profile URL</td>
+<td><code>https://www.linkedin.com/in/nicksananton</code></td>
+</tr>
+<tr>
+<td><code>[YOUR-EMAIL]</code></td>
+<td>Your contact email</td>
+<td><code>nicksananton@example.com</code></td>
+</tr>
+<tr>
+<td><code>[YOUR-PORTFOLIO-URL]</code></td>
+<td>Your portfolio / personal site (or remove the line)</td>
+<td><code>https://nicksananton.dev</code></td>
+</tr>
+</tbody>
+</table>
+<h3>How to find them</h3>
+<p>In any text editor (or on GitHub's web editor), use <strong>Find &amp; Replace</strong> (Ctrl+H on Windows / Cmd+H on Mac):</p>
+<ul>
+<li>Find: <code>[YOUR-LINKEDIN-URL]</code> → Replace with your LinkedIn URL</li>
+<li>Find: <code>[YOUR-EMAIL]</code> → Replace with your email</li>
+<li>Find: <code>[YOUR-PORTFOLIO-URL]</code> → Replace with your portfolio URL, or remove that badge line if you don't have one yet</li>
+</ul>
+<p>Do this for <strong>every <code>.md</code> file</strong> in this folder — the profile <code>README.md</code> and all 6 files in <code>repos/</code>.</p>
+<blockquote>
+<p><strong>Tip:</strong> If you don't have a portfolio URL yet, just delete the entire "Portfolio" badge line in the <em>Connect</em> sections. Don't leave the placeholder showing on your live profile.</p>
+</blockquote>
+<hr>
+<h2>🧑‍💻 Step 2 — Update Your GitHub Profile (Bio + Avatar + Name)</h2>
+<p>These settings live on your GitHub account, not in the README.</p>
+<h3>2.1 Set your public name</h3>
+<ol>
+<li>Go to https://github.com/settings/profile</li>
+<li>Under <strong>Name</strong>, enter your real name (e.g. <strong>Nicksananton</strong> — your brand name).</li>
+<li>Click <strong>Update profile</strong>.</li>
+</ol>
+<h3>2.2 Write a short bio</h3>
+<p>In the same page, under <strong>Bio</strong>, paste:</p>
+<pre><code>Building Smart Solutions ⚡ | Electrical Technology | Renewable Energy ☀️ | Electronics &amp; Automation 🤖
+</code></pre>
+<p>(Or keep your existing one — it already matches your brand.)</p>
+<h3>2.3 Set your location</h3>
+<p>In the same page, under <strong>Location</strong>, enter <strong>Sri Lanka</strong> (or your city if you prefer).</p>
+<h3>2.4 Upload a professional avatar</h3>
+<p>Still on the same page, click the avatar circle and upload a clean headshot or your logo. A simple, clear, square image (≥500×500 pixels) works best. Avoid blurry or dark photos — this is the first thing visitors see.</p>
+<h3>2.5 Add your LinkedIn + email to your GitHub profile</h3>
+<p>Scroll down on the same settings page; under <strong>Social links</strong>, add:</p>
+<ul>
+<li>LinkedIn → your LinkedIn URL</li>
+<li>(Optional) Personal website → your portfolio URL</li>
+</ul>
+<p>Click <strong>Update profile</strong> to save everything.</p>
+<hr>
+<h2>🌟 Step 3 — Upload the Profile README</h2>
+<p>This is the most important file — it appears at the top of your GitHub profile page.</p>
+<h3>3.1 Open the special profile repo</h3>
+<ol>
+<li>Go to https://github.com/nicksananton0923-create/nicksananton0923-create</li>
+<li>This repository has the same name as your username, which is what makes its <code>README.md</code> show on your profile.</li>
+<li>Click on the existing <code>README.md</code> file.</li>
+<li>Click the <strong>pencil icon</strong> (✏️ Edit this file) in the top-right of the file view.</li>
+</ol>
+<h3>3.2 Replace the content</h3>
+<ol>
+<li>Open the <code>README.md</code> file from this folder on your computer.</li>
+<li>Copy <strong>all</strong> of its content.</li>
+<li>Paste it into the GitHub editor, replacing the existing content entirely.</li>
+<li>Click <strong>Commit changes...</strong> → confirm. Use a clear commit message like:<br>
+<code>Update profile README with engineering-pro layout</code></li>
+</ol>
+<h3>3.3 Verify</h3>
+<ol>
+<li>Go to https://github.com/nicksananton0923-create</li>
+<li>You should see your new profile README render at the top of the page — with the wave banner, badges, tech stack table, featured project cards, GitHub stats, and footer banner.</li>
+</ol>
+<p>If anything looks broken, click the <strong>pencil icon</strong> on the README again and fix it. Common fixes:<br>
+- A badge shows as broken image → check that the URL has no spaces (use <code>%20</code> for spaces).<br>
+- The wave banner doesn't load → it's served by capsule-render.vercel.app, which is usually reliable. If it fails once, refresh the page.</p>
+<hr>
+<h2>📦 Step 4 — Upload Each Repo README</h2>
+<p>Repeat this process for each of the 6 repo README files in the <code>repos/</code> folder.</p>
+<h3>For each repository:</h3>
+<ol>
+<li>
+<p>Open the repository on GitHub. The 6 target repositories are:<br>
+   - <code>industrial-air-quality-monitor</code><br>
+   - <code>Arduino-smart-fire-detection-suppression</code><br>
+   - <code>Arduino-tomato-colour-sorting</code><br>
+   - <code>Industrial-hvac-maintenance</code><br>
+   - <code>Industrial-water-consumption-monitoring</code><br>
+   - <code>Industrial-maintenance-request-system</code></p>
+</li>
+<li>
+<p>Click on the existing <code>README.md</code> file. If there isn't one, click <strong>Add file → Create new file</strong> and name it <code>README.md</code>.</p>
+</li>
+<li>
+<p>Click the <strong>pencil icon</strong> (✏️ Edit this file).</p>
+</li>
+<li>
+<p>Open the matching file from this folder's <code>repos/</code> directory on your computer.<br>
+   - The file name pattern is <code>&lt;repo-name&gt;-README.md</code> (e.g. <code>industrial-air-quality-monitor-README.md</code>).<br>
+   - Copy <strong>all</strong> of its content.</p>
+</li>
+<li>
+<p>Paste it into the GitHub editor, replacing the existing content.</p>
+</li>
+<li>
+<p>Click <strong>Commit changes...</strong> with a message like:<br>
+<code>Update README with professional engineering-pro layout</code></p>
+</li>
+<li>
+<p>Refresh the repo page and verify the new README renders correctly.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Tip:</strong> If the existing repo already has good content that the new README replaces, you don't lose any work — the old content is still in the git history. You can always go back via <strong>History</strong> if needed.</p>
+</blockquote>
+<hr>
+<h2>🏷️ Step 5 — Add Topics (Tags) to Each Repository</h2>
+<p>Topics help people discover your repositories through GitHub search. Add 4–6 topics to each repo.</p>
+<h3>How to add topics</h3>
+<ol>
+<li>Open the repository on GitHub.</li>
+<li>In the right sidebar, find the <strong>Topics</strong> section (under the description).</li>
+<li>Click the <strong>gear icon</strong> (⚙️) next to Topics.</li>
+<li>Add the topics below for that repo. Type each one and press Enter.</li>
+<li>Click <strong>Save changes</strong>.</li>
+</ol>
+<h3>Suggested topics per repo</h3>
+<table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>Suggested topics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>industrial-air-quality-monitor</code></td>
+<td><code>arduino</code>, <code>air-quality</code>, <code>embedded</code>, <code>sensors</code>, <code>industrial-iot</code>, <code>monitoring</code></td>
+</tr>
+<tr>
+<td><code>Arduino-smart-fire-detection-suppression</code></td>
+<td><code>arduino</code>, <code>fire-detection</code>, <code>safety</code>, <code>embedded</code>, <code>automation</code>, <code>iot</code></td>
+</tr>
+<tr>
+<td><code>Arduino-tomato-colour-sorting</code></td>
+<td><code>arduino</code>, <code>automation</code>, <code>agriculture</code>, <code>color-sensor</code>, <code>conveyor</code>, <code>embedded</code></td>
+</tr>
+<tr>
+<td><code>Industrial-hvac-maintenance</code></td>
+<td><code>hvac</code>, <code>maintenance</code>, <code>industrial</code>, <code>csv-templates</code>, <code>building-services</code>, <code>documentation</code></td>
+</tr>
+<tr>
+<td><code>Industrial-water-consumption-monitoring</code></td>
+<td><code>water</code>, <code>monitoring</code>, <code>data-analysis</code>, <code>excel</code>, <code>dashboard</code>, <code>industrial</code></td>
+</tr>
+<tr>
+<td><code>Industrial-maintenance-request-system</code></td>
+<td><code>cmms</code>, <code>javascript</code>, <code>maintenance</code>, <code>work-orders</code>, <code>industrial</code>, <code>nodejs</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>📝 Step 6 — Update Each Repo Description</h2>
+<p>The short description under each repo name on your profile page matters a lot — it's the second thing visitors see after the repo name.</p>
+<h3>How to update</h3>
+<ol>
+<li>Open the repository.</li>
+<li>In the right sidebar, find <strong>About</strong> (under the description).</li>
+<li>Click the <strong>pencil icon</strong> (⚙️) next to About.</li>
+<li>Update the description with one of the suggested texts below (or your own).</li>
+<li>Tick <strong>Releases</strong>, <strong>Packages</strong>, and <strong>Environments</strong> only if relevant (usually leave unticked).</li>
+<li>Click <strong>Save changes</strong>.</li>
+</ol>
+<h3>Suggested descriptions</h3>
+<table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>Suggested description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>industrial-air-quality-monitor</code></td>
+<td>Arduino Nano-based industrial air quality monitoring and alert system</td>
+</tr>
+<tr>
+<td><code>Arduino-smart-fire-detection-suppression</code></td>
+<td>Arduino-based smart fire detection prototype with conceptual automatic suppression</td>
+</tr>
+<tr>
+<td><code>Arduino-tomato-colour-sorting</code></td>
+<td>Arduino-based smart conveyor belt for tomato ripeness detection and automatic sorting</td>
+</tr>
+<tr>
+<td><code>Industrial-hvac-maintenance</code></td>
+<td>Professional HVAC, chiller, AHU &amp; cooling system maintenance documentation framework</td>
+</tr>
+<tr>
+<td><code>Industrial-water-consumption-monitoring</code></td>
+<td>Industrial water consumption monitoring, trend analysis &amp; reporting dashboard</td>
+</tr>
+<tr>
+<td><code>Industrial-maintenance-request-system</code></td>
+<td>Digital maintenance management system for work requests, assignments, and work order tracking</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>📌 Step 7 — Pin Repositories to Your Profile</h2>
+<p>Pinned repos show at the top of your profile, right under the README. Pin 6 of your 7 repos (the 7th is the profile README repo itself, which doesn't need pinning).</p>
+<h3>How to pin</h3>
+<ol>
+<li>Go to https://github.com/nicksananton0923-create</li>
+<li>Scroll to the <strong>Pinned</strong> section (just below the README).</li>
+<li>Click <strong>Customize your pins</strong>.</li>
+<li>Select these 6 repositories (in this order for visual balance):<br>
+   - <code>industrial-air-quality-monitor</code> ← only one with a star<br>
+   - <code>Industrial-hvac-maintenance</code><br>
+   - <code>Industrial-maintenance-request-system</code><br>
+   - <code>Arduino-smart-fire-detection-suppression</code><br>
+   - <code>Arduino-tomato-colour-sorting</code><br>
+   - <code>Industrial-water-consumption-monitoring</code></li>
+<li>Click <strong>Save pins</strong>.</li>
+</ol>
+<blockquote>
+<p>The pinning order matters because GitHub shows them left-to-right, top-to-bottom. Putting the starred repo first makes the profile look more established at first glance.</p>
+</blockquote>
+<hr>
+<h2>🔗 Step 8 — (Optional) Add a Profile README Banner Image</h2>
+<p>If you want even more polish, you can add a custom banner image instead of the auto-generated one.</p>
+<ol>
+<li>Create a banner image (1280×320 px) with your name + tagline. Tools that work well:<br>
+   - https://canva.com (search "GitHub banner")<br>
+   - https://bannerator.vercel.app (auto-generates from text)</li>
+<li>Save it as <code>banner.png</code>.</li>
+<li>Upload it to your <code>nicksananton0923-create/nicksananton0923-create</code> repo (drag-and-drop on the GitHub file browser).</li>
+<li>Edit the profile <code>README.md</code> and replace the first <code>&lt;img&gt;</code> line (the capsule-render banner) with:<br>
+<code>markdown
+   &lt;img src="banner.png" width="100%" alt="header banner" /&gt;</code></li>
+<li>Commit the change.</li>
+</ol>
+<hr>
+<h2>✅ Step 9 — Final Verification</h2>
+<p>Open https://github.com/nicksananton0923-create in a <strong>fresh / incognito window</strong> (so you see what visitors see, not your logged-in view) and check:</p>
+<ul>
+<li>[ ] Profile README renders fully — banner, name, badges, tech stack, featured projects, stats, footer banner.</li>
+<li>[ ] No <code>[PLACEHOLDER]</code> text is visible anywhere on the profile or in any repo README.</li>
+<li>[ ] All 6 pinned repositories appear under the README with their new descriptions.</li>
+<li>[ ] Each pinned repo shows a small language tag and stars/forks count.</li>
+<li>[ ] All badge images load (no broken image icons).</li>
+<li>[ ] GitHub stats card shows on the profile (sometimes takes a few minutes on first load — refresh once).</li>
+</ul>
+<p>If anything is broken, edit the corresponding README and fix it. Commit messages like <code>Fix LinkedIn badge URL</code> are perfectly fine — small fixes are how a profile improves over time.</p>
+<hr>
+<h2>🛠 Maintenance Tips</h2>
+<ul>
+<li><strong>Commit regularly.</strong> When you update a project, push the change to GitHub the same day. A profile with recent commits looks alive; one with no commits for 6 months looks abandoned.</li>
+<li><strong>Keep the README in sync with the project.</strong> If you add a new file to a repo, mention it in the README. A README that lists files that don't exist (or omits files that do) is worse than no README.</li>
+<li><strong>Star repositories you learn from.</strong> Your starred list shows what you're studying — it's a passive signal of your interests. Employers look at this.</li>
+<li><strong>Update the <em>Currently Learning</em> badges every few months.</strong> As you finish learning PLCs or AutoCAD, replace those badges with the next thing. A current "currently learning" section shows you're actively growing.</li>
+<li><strong>Add new repos over time.</strong> Each new project gets the same README pattern as the existing ones. Consistency across the portfolio is what makes it look professional.</li>
+</ul>
+<hr>
+<h2>❓ Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>README shows raw markdown, not rendered</td>
+<td>Make sure the file is named exactly <code>README.md</code> (capital letters, .md extension).</td>
+</tr>
+<tr>
+<td>Badge shows broken image</td>
+<td>Check the URL — copy-paste it into a browser; if it 404s, find a replacement at https://shields.io.</td>
+</tr>
+<tr>
+<td>Wave banner doesn't load</td>
+<td>capsule-render.vercel.app may be temporarily down. Refresh, or replace with a local image (see Step 8).</td>
+</tr>
+<tr>
+<td>GitHub stats card shows zeros</td>
+<td>The stats card needs your account to have some activity. If you have very few commits, it'll just show zeros — that's fine, it will fill in over time.</td>
+</tr>
+<tr>
+<td>Pinned repo not showing</td>
+<td>Make sure the repo is <strong>public</strong>. Private repos don't show on a public profile.</td>
+</tr>
+<tr>
+<td>Old README content still showing</td>
+<td>Hard refresh the page (Ctrl+Shift+R) — GitHub sometimes caches.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>🎉 You're Done</h2>
+<p>Once you finish all the steps, your GitHub profile will show:</p>
+<ul>
+<li>A clean <strong>wave banner</strong> with your name and tagline.</li>
+<li>A row of identity badges (GitHub, Location, Focus, Status) and visitor counter.</li>
+<li>A short, well-written <strong>About Me</strong> that positions you as an electrical technology student with a documentation-first mindset.</li>
+<li>A clean <strong>Tech Stack</strong> table split into Electrical / Industrial / Embedded / Data columns.</li>
+<li>Six <strong>featured project cards</strong> in a 2×3 grid, each with badges and a link.</li>
+<li>A <strong>Practical Experience</strong> section showing your real internships.</li>
+<li>A <strong>Currently Learning</strong> section with 2026 goals.</li>
+<li>Live <strong>GitHub stats + streak + top languages</strong> cards.</li>
+<li>A clean <strong>Connect</strong> section with LinkedIn / Email / Portfolio badges.</li>
+<li>Six pinned repos with professional descriptions and topic tags.</li>
+</ul>
+<p>That's a senior-engineer-grade GitHub profile — built in an afternoon.</p>
+<hr>
+<div align="center">
+
+**⚡ Now go make your first commit of the new profile. ⚡**
+
+</div></div></section>
+</body>
+</html>

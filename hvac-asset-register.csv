@@ -1,0 +1,7 @@
+asset_id,asset_name,asset_type,manufacturer,model,serial_number,year_built,capacity_kw,capacity_ton,location_id,system_id,refrigerant,charge_kg,charge_lb,voltage,phase,status,install_date,warranty_expiry,criticality,notes
+PLT-CHL-001,Chiller No.1 Centrifugal,centrifugal_chiller_water_cooled,Carrier,23XRV-A,SN-CHL-001-A,2018,1758,500,PLT-1,CHW-PRIMARY,R-134a,431,950,4160,3,active,2018-03-15,2023-03-15,critical,# EXAMPLE — anon
+PLT-CHL-002,Chiller No.2 Screw,screw_chiller_water_cooled,Trane,RTAF-300,SN-CHL-002-A,2020,1055,300,PLT-1,CHW-PRIMARY,R-514A,168,370,4160,3,active,2020-07-22,2025-07-22,critical,# EXAMPLE — anon
+PLT-AHU-014,AHU West Wing,air_handling_unit,Trane,CSAA025,SN-AHU-014-A,2019,90,25,FLR-3,WS-AHU,N/A,0,0,400,3,active,2019-11-05,2024-11-05,high,# EXAMPLE — anon
+PLT-CT-001,Cooling Tower Cell 1,cooling_tower_counterflow,BAC,S3E-2000,SN-CT-001-A,2017,3516,1000,ROOF,CT-LOOP,N/A,0,0,400,3,active,2017-06-12,2022-06-12,critical,# EXAMPLE — anon
+PLT-PMP-CHS-001,CHW Primary Pump 1,centrifugal_pump,Bell Gossett,Series 60,SN-PMP-001-A,2018,15,5,PLT-1,CHW-PRIMARY,N/A,0,0,400,3,active,2018-03-15,2023-03-15,high,# EXAMPLE — anon
+PLT-FAN-EXH-018,Exhaust Fan Roof North,centrifugal_fan_direct_driven,Greenheck,GB-180,SN-FAN-018-A,2016,2.2,0.6,ROOF,EXH-NORTH,N/A,0,0,400,3,active,2016-09-01,2021-09-01,medium,# EXAMPLE — anon

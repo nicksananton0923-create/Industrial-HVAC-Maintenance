@@ -1,0 +1,2 @@
+replacement_id,date,asset_id,technician_id,filter_location,filter_type,filter_size,filter_merv,filter_qty,pre_filter_replaced,final_filter_replaced,pre_dp_pa_before,pre_dp_inwg_before,final_dp_pa_before,final_dp_inwg_before,pre_dp_pa_after,pre_dp_inwg_after,final_dp_pa_after,final_dp_inwg_after,batch_number,supplier,disposal_method,notes
+FLT-2025-014,2025-01-14,PLT-AHU-014,T-1001,return_air_bank_2,rigid_cartridge,595x595x292,M-14,4,yes,yes,75,0.30,250,1.00,40,0.16,90,0.36,LOT-2025-01-0011,Vendor-FA-Example,sealed_bag_disposal,# EXAMPLE — anon

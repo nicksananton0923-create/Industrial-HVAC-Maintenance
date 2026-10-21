@@ -1,0 +1,24 @@
+record_type,record_id,date,asset_id,technician_id,key_metric_metric,key_metric_imperial,unit_metric,unit_imperial,summary,notes
+ASSET,PLT-CHL-001,2018-03-15,PLT-CHL-001,N/A,1758,500,kW,ton,Water-cooled centrifugal chiller (R-134a),# EXAMPLE — anon
+ASSET,PLT-CHL-002,2020-07-22,PLT-CHL-002,N/A,1055,300,kW,ton,Water-cooled screw chiller (R-514A),# EXAMPLE — anon
+ASSET,PLT-AHU-014,2019-11-05,PLT-AHU-014,N/A,90,25,kW,ton,Built-up AHU West Wing,# EXAMPLE — anon
+ASSET,PLT-CT-001,2017-06-12,PLT-CT-001,N/A,3516,1000,kW,ton,Counterflow cooling tower cell 1,# EXAMPLE — anon
+ASSET,PLT-PMP-CHS-001,2018-03-15,PLT-PMP-CHS-001,N/A,15,5,kW,ton,CHW primary pump 1,# EXAMPLE — anon
+SERVICE,CHL-SVC-2025-014,2025-01-14,PLT-CHL-001,T-1001,1.4,2.5,degC,degF,Annual chiller service — condenser approach 1.4 degC,# EXAMPLE — readings illustrative only
+SERVICE,CHL-SVC-2025-028,2025-03-02,PLT-CHL-002,T-1002,0.9,1.6,degC,degF,Screw chiller annual service — evaporator approach 0.9 degC,# EXAMPLE — readings illustrative only
+INSPECTION,AHU-2025-1014,2025-01-14,PLT-AHU-014,T-1001,13.5,56.3,degC,degF,Monthly AHU inspection — SAT 13.5 degC vs setpoint 13.0 degC,# EXAMPLE — anon
+INSPECTION,CT-2025-1014,2025-01-14,PLT-CT-001,T-1001,4.0,7.2,degC,degF,Cooling tower inspection — approach to WBT 4.0 degC,# EXAMPLE — anon
+INSPECTION,PMP-2025-014,2025-01-14,PLT-PMP-CHS-001,T-1001,1.6,0.063,mm/s,in/s,Pump vibration inspection — DE vibration 1.6 mm/s within zone B,# EXAMPLE — anon
+FILTER,FLT-2025-014,2025-01-14,PLT-AHU-014,T-1001,90,0.36,Pa,inH2O,Filter replacement — final DP after replacement 90 Pa,# EXAMPLE — anon
+REFRIG,RSV-2025-014,2025-01-14,PLT-CHL-001,T-1001,2.5,5.51,kg,lb,R-134a topup after filter change — 2.5 kg added,# EXAMPLE — anon
+REFRIG,RSV-2025-028,2025-03-02,PLT-CHL-002,T-1002,168,370,kg,lb,R-514A full recovery-recharge — 168 kg recovered,# EXAMPLE — anon
+FAULT,FLT-2025-014,2025-01-14,PLT-CHL-001,BMS,2.0,2.0,h,h,High condenser pressure — 2.0h downtime,# EXAMPLE — anon
+FAULT,FLT-2025-028,2025-02-03,PLT-AHU-014,Operator,1.5,1.5,h,h,Supply temp sensor drift — 1.5h downtime,# EXAMPLE — anon
+FAULT,FLT-2025-035,2025-02-19,PLT-PMP-CHS-001,BMS,72.0,72.0,h,h,DE bearing wear — 72h downtime,# EXAMPLE — anon
+READING,RDG-2025-0141,2025-01-14T08:00:00,PLT-CHL-001,BMS,7.0,44.6,degC,degF,CHW supply temp — 7.0 degC,# EXAMPLE — anon
+READING,RDG-2025-0150,2025-01-14T08:00:00,PLT-AHU-014,BMS,13.5,56.3,degC,degF,AHU supply air temp — 13.5 degC,# EXAMPLE — anon
+READING,RDG-2025-0155,2025-01-14T08:00:00,PLT-CT-001,BMS,32.0,89.6,degC,degF,CW hot water inlet — 32.0 degC,# EXAMPLE — anon
+READING,RDG-2025-0158,2025-01-14T08:00:00,PLT-PMP-CHS-001,BMS,14.5,14.5,A,A,Pump motor amps — 14.5 A vs 19.3 FLA,# EXAMPLE — anon
+PM,PM-CHL-001-028,2025-01-05,PLT-CHL-001,Certified technician,1,1,event,event,Monthly F-Gas refrigerant leak check — no leak found,# EXAMPLE — anon
+PM,PM-CHL-001-180,2025-01-14,PLT-CHL-001,OEM service provider,1,1,event,event,Annual chiller service completed — oil sample sent for analysis,# EXAMPLE — anon
+PM,PM-CT-001-001,2025-01-14,PLT-CT-001,Operator,1,1,event,event,Daily cooling tower water test — pH 7.8 conductivity 1800 uS/cm,# EXAMPLE — anon

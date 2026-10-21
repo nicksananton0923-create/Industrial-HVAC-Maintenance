@@ -1,0 +1,37 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.code-workspace
+
+# Spreadsheet / office temp files
+~$*
+*.tmp
+*.bak
+
+# Site-specific data — keep templates clean
+# (uncomment the lines below once you start populating real site data)
+# data/sites/
+# data/*-real.csv
+
+# Backup / merge files
+*.orig
+*.rej
+
+# Logs
+*.log
+
+# Python / scripts scratch
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Diagram generation scratch (preserve final PNGs, ignore intermediates)
+diagrams/*.svg.bak
+diagrams/*.mmd.tmp

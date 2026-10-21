@@ -1,0 +1,12 @@
+pm_task_id,asset_id,task_description,frequency_days,frequency_hours_run,last_completed_date,next_due_date,procedure_ref,assigned_to,typical_duration_min,parts_required,priority,safety_critical,regulatory_ref,notes
+PM-CHL-001-001,PLT-CHL-001,Daily chiller log review - operating readings,1,0,2025-01-14,2025-01-15,docs/inspection-methodology.md#daily-operator-round,Operator,15,n/a,high,no,ASHRAE 15 / OEM manual,# EXAMPLE
+PM-CHL-001-014,PLT-CHL-001,Weekly chiller visual inspection,7,0,2025-01-13,2025-01-20,docs/inspection-methodology.md#weekly-visual,Operator,30,none,medium,no,ASHRAE 15,# EXAMPLE
+PM-CHL-001-028,PLT-CHL-001,Monthly refrigerant leak check (F-Gas category),30,0,2025-01-05,2025-02-04,docs/safety-and-compliance.md#refrigerant-leak-checks,Certified technician,60,leak_detector,high,yes,EU F-Gas 517/2014 Art.3,# EXAMPLE
+PM-CHL-001-056,PLT-CHL-001,Quarterly oil sample analysis,90,2000,2024-12-15,2025-03-15,docs/inspection-methodology.md#oil-analysis,OEM service provider,120,oil_sample_kit,medium,no,OEM manual,# EXAMPLE
+PM-CHL-001-180,PLT-CHL-001,Annual chiller service including oil change and EDD leak test,365,8000,2025-01-14,2026-01-14,docs/inspection-methodology.md#annual-chiller-service,OEM service provider,480,oil_200L+oil_filter+refrigerant_topup,high,yes,ASHRAE 15 / EU F-Gas 517/2014,# EXAMPLE
+PM-CHL-001-1820,PLT-CHL-001,Eddy current tube inspection (5-year),1825,0,2023-03-01,2028-03-01,docs/inspection-methodology.md#eddy-current-tube-test,OEM service provider,720,n/a,high,yes,ASHRAE 15,# EXAMPLE
+PM-AHU-014-030,PLT-AHU-014,Monthly filter inspection,30,0,2025-01-14,2025-02-13,docs/inspection-methodology.md#filter-inspection,Operator,20,none,medium,no,ASHRAE 62.1,# EXAMPLE
+PM-AHU-014-090,PLT-AHU-014,Quarterly belt inspection and tensioning,90,0,2024-12-15,2025-03-15,docs/inspection-methodology.md#belt-tension,Technician,45,belt_if_required,medium,no,OEM manual,# EXAMPLE
+PM-CT-001-001,PLT-CT-001,Daily cooling tower water test,1,0,2025-01-14,2025-01-15,docs/inspection-methodology.md#cooling-tower-daily,Operator,15,test_kit,high,yes,ASHRAE 188 / AS/NZS 3666,# EXAMPLE
+PM-CT-001-090,PLT-CT-001,Quarterly cooling tower descale,90,0,2024-12-15,2025-03-15,docs/inspection-methodology.md#ct-descale,Contractor,300,descaler,high,yes,AS/NZS 3666.2,# EXAMPLE
+PM-PMP-CHS-001-090,PLT-PMP-CHS-001,Quarterly vibration and bearing inspection,90,0,2024-12-15,2025-03-15,docs/inspection-methodology.md#pump-vibration,Technician,45,none,medium,no,OEM manual,# EXAMPLE

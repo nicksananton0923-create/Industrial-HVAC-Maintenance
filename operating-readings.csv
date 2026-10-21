@@ -1,0 +1,21 @@
+reading_id,timestamp,asset_id,bms_point_id,point_name,point_class,value_metric,value_imperial,unit_metric,unit_imperial,out_of_range_flag,alarm_state,operator,notes
+RDG-2025-0141,2025-01-14T08:00:00,PLT-CHL-001,BMS-CHL-001-CHWS-T,CHW Supply Temp,temperature,7.0,44.6,degC,degF,no,normal,BMS,# EXAMPLE
+RDG-2025-0142,2025-01-14T08:00:00,PLT-CHL-001,BMS-CHL-001-CHWR-T,CHW Return Temp,temperature,12.0,53.6,degC,degF,no,normal,BMS,# EXAMPLE
+RDG-2025-0143,2025-01-14T08:00:00,PLT-CHL-001,BMS-CHL-001-CWS-T,Condenser Water Supply Temp,temperature,27.5,81.5,degC,degF,no,normal,BMS,# EXAMPLE
+RDG-2025-0144,2025-01-14T08:00:00,PLT-CHL-001,BMS-CHL-001-CWR-T,Condenser Water Return Temp,temperature,32.0,89.6,degC,degF,no,normal,BMS,# EXAMPLE
+RDG-2025-0145,2025-01-14T08:00:00,PLT-CHL-001,BMS-CHL-001-SUC-P,Suction Pressure,pressure,350,50.8,kPa,psig,no,normal,BMS,# EXAMPLE
+RDG-2025-0146,2025-01-14T08:00:00,PLT-CHL-001,BMS-CHL-001-DIS-P,Discharge Pressure,pressure,1185,171.8,kPa,psig,no,normal,BMS,# EXAMPLE
+RDG-2025-0147,2025-01-14T08:00:00,PLT-CHL-001,BMS-CHL-001-A,Amps,electrical,180,180,A,A,no,normal,BMS,# EXAMPLE
+RDG-2025-0148,2025-01-14T08:00:00,PLT-CHL-001,BMS-CHL-001-kW,Chiller kW,electrical,320,320,kW,kW,no,normal,BMS,# EXAMPLE
+RDG-2025-0149,2025-01-14T08:00:00,PLT-CHL-001,BMS-CHL-001-RUN,Run Status,state,1,1,on,on,no,normal,BMS,# EXAMPLE
+RDG-2025-0150,2025-01-14T08:00:00,PLT-AHU-014,BMS-AHU-014-SAT,Supply Air Temp,temperature,13.5,56.3,degC,degF,no,normal,BMS,# EXAMPLE
+RDG-2025-0151,2025-01-14T08:00:00,PLT-AHU-014,BMS-AHU-014-RAT,Return Air Temp,temperature,24.0,75.2,degC,degF,no,normal,BMS,# EXAMPLE
+RDG-2025-0152,2025-01-14T08:00:00,PLT-AHU-014,BMS-AHU-014-OA-T,Outdoor Air Temp,temperature,18.0,64.4,degC,degF,no,normal,BMS,# EXAMPLE
+RDG-2025-0153,2025-01-14T08:00:00,PLT-AHU-014,BMS-AHU-014-FDP,Filter Differential Pressure,pressure,185,0.74,Pa,inH2O,no,normal,BMS,# EXAMPLE
+RDG-2025-0154,2025-01-14T08:00:00,PLT-AHU-014,BMS-AHU-014-DMP-POS,Outdoor Air Damper Position,position,30,30,pct,pct,no,normal,BMS,# EXAMPLE
+RDG-2025-0155,2025-01-14T08:00:00,PLT-CT-001,BMS-CT-001-HWI,Hot Water Inlet,temperature,32.0,89.6,degC,degF,no,normal,BMS,# EXAMPLE
+RDG-2025-0156,2025-01-14T08:00:00,PLT-CT-001,BMS-CT-001-HWO,Hot Water Outlet,temperature,27.5,81.5,degC,degF,no,normal,BMS,# EXAMPLE
+RDG-2025-0157,2025-01-14T08:00:00,PLT-CT-001,BMS-CT-001-WBT,Outdoor Wetbulb,temperature,21.0,69.8,degC,degF,no,normal,BMS,# EXAMPLE
+RDG-2025-0158,2025-01-14T08:00:00,PLT-PMP-CHS-001,BMS-PMP-CHS-001-A,Pump Amps,electrical,14.5,14.5,A,A,no,normal,BMS,# EXAMPLE
+RDG-2025-0159,2025-01-14T08:00:00,PLT-PMP-CHS-001,BMS-PMP-CHS-001-HZ,VFD Output Hz,frequency,45,45,Hz,Hz,no,normal,BMS,# EXAMPLE
+RDG-2025-0160,2025-01-14T08:00:00,PLT-PMP-CHS-001,BMS-PMP-CHS-001-STATUS,Run Status,state,1,1,on,on,no,normal,BMS,# EXAMPLE
