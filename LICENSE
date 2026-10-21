@@ -1,0 +1,41 @@
+MIT License
+
+Copyright (c) 2025 Industrial HVAC Maintenance Documentation Framework Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Note on documentation content:
+
+The CSV templates, Markdown documentation, and sample records in this
+repository are documentation, not executable software. They are licensed
+under the same MIT License for simplicity of reuse. Users adapting this
+framework for their site are encouraged (but not required) to:
+  1. Attribute the framework in their site-specific README.
+  2. Contribute non-site-specific improvements back to the upstream
+     repository via pull request.
+  3. Retain the safety and compliance disclaimers; they exist for good
+     reason and their removal exposes users to avoidable risk.
+
+The authors make no warranty regarding the suitability of this framework
+for any specific site, equipment, or regulatory regime. Users must verify
+alignment with their OEM manuals, site procedures, and applicable
+regulations before relying on this framework for operational or
+compliance purposes.
